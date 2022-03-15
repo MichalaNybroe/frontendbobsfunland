@@ -3,6 +3,7 @@
 // Send booking data til backend
 document.addEventListener("DomContentLoaded", createFormEventlistener);
 
+let book;
 function createFormEventlistener() {
   book = document.getElementById("bookForm");
   book.addEventListener("submit", createBooking);
@@ -16,7 +17,7 @@ async function createBooking(event) {
 
   try {
     const formData = await new FormData(form);
-    const responseData = sendJson(url, formData);
+    sendJson(url, formData);
   } catch (err) {
     alert("Noget gik galt ved bookning");
   }
@@ -42,18 +43,22 @@ async function sendJson(url, formData) {
   return response.json();
 }
 
+
+
+
+
 // Opret dropdown aktiviteter
 const activityMap = new Map();
 const dropDownActivity = document.getElementById("activityDropDown");
 
-const activityURL = "localhost/8080/activity";
+const activityURL = "/activity";
 
 function readAllActivities() {
   return fetch(activityURL).then((response) => response.json());
 }
 
-function setActivities() {
-  const activityList = readAllActivities();
+async function setActivities() {
+  const activityList = await readAllActivities();
   activityList.forEach((activity, index) => {
     activityMap.set(activity.name, activity);
   });
@@ -68,15 +73,36 @@ function fillDropDownActivity() {
   }
 }
 
+setActivities();
+fillDropDownActivity();
+
+
+
+
 // Opret dropdown instruktør
 const instructorMap = new Map();
 const dropDownInstructor = document.getElementById("instructorDropDown");
 
+const instructorURL = "/instructor";
+
+function readAllInstructors() {
+  return fetch(instructorURL).then((response) => response.json());
+}
+
+async function setInstructors() {
+  const instructorList = await readAllInstructors();
+  instructorList.forEach((instructor, index) => {
+    instructorMap.set(instructor.email, instructor);
+  });
+}
 function fillDropDownInstructor() {
   for (const instructorKey of instructorMap.keys()) {
-    const element = document.createElement("opstion");
+    const element = document.createElement("option");
     element.textContent = instructorKey;
     element.value = instructorMap.get(instructorKey);
     dropDownInstructor.appendChild(element);
   }
 }
+
+setActivities();
+fillDropDownInstructor();
