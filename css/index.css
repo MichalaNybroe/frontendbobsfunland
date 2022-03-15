@@ -1,6 +1,6 @@
 
 body {
-  background-color: #ff61b0;
+  background-color: pink;
   font-family: Futura;
   font-familysize: 20px;
 
@@ -25,12 +25,16 @@ h2 {
   text-align: left;
 
 
+
+
 }
 .header {
   font-size: 30px;
 
 
 }
+
+
 .introducktion {
   text-align: center;
 
@@ -48,6 +52,9 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 
+}
+.footer{
+  font-size: 30px;
 }
 
 
