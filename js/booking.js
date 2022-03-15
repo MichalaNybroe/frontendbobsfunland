@@ -43,10 +43,6 @@ async function sendJson(url, formData) {
   return response.json();
 }
 
-
-
-
-
 // Opret dropdown aktiviteter
 const activityMap = new Map();
 const dropDownActivity = document.getElementById("activityDropDown");
@@ -75,9 +71,6 @@ function fillDropDownActivity() {
 
 setActivities();
 fillDropDownActivity();
-
-
-
 
 // Opret dropdown instruktør
 const instructorMap = new Map();
