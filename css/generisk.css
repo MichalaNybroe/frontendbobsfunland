@@ -16,9 +16,15 @@
 .header{
   background-color: #ff61b0;
   color: white;
+  text-align: left;
+  padding: 50px 0 50px;
+
+
 }
 
 .footer{
   background-color: #ff61b0;
   color: white;
 }
+
+
