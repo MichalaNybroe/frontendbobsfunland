@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+</head>
+
+<body>
+<div id="content">
+
+  <h2>Booking</h2>
+
+  <div>
+    <form action="" method="post">
+      <p>Registrer booking</p>
+      <p>Aktivitet</p>
+      <select>
+        <option>ATV Kørsel</option>
+        <option>Paintball</option>
+        <option>Klatring</option>
+        <option>Kajak</option>
+        <option>Repelling</option>
+      </select>
+      <p>Dato</p>
+      <input type="date" required>
+      <p>Tid</p>
+      <input type="time" required>
+      <p>Deltagere</p>
+      <input type="number" placeholder="5" required>
+      <p>Instruktør</p>
+      <select>
+        <option>Jens Madsen</option>
+      </select>
+      <input type="submit" value="Gem">
+    </form>
+  </div>
+
+  <div id="bookings">
+    <table>
+      <tr>
+        <th>Ordrenummer</th>
+        <th>Dato</th>
+        <th>Tid</th>
+        <th>Aktivitet</th>
+        <th>Antal Deltagere</th>
+        <th>Instruktør</th>
+      </tr>
+      <tr></tr>
+    </table>
+
+  </div>
+
+</div>
+</body>
+</html>
