@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+}
+
+.content {
+color: #303030;
+}
+
+.header{
+  background-color: #ff61b0;
+  color: white;
+}
+
+.footer{
+  background-color: #ff61b0;
+  color: white;
+}
