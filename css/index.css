@@ -1,17 +1,9 @@
-
 body {
   background-color: pink;
   font-family: Futura;
   font-familysize: 20px;
-
 }
 
-
-.chosenActivity {
-
-
-
-}
 h2 {
   font-size: 40px;
   text-align: center;
@@ -19,27 +11,19 @@ h2 {
   color:#303030;
 }
 
-
 .panel {
   font-size: 30px;
   text-align: left;
-
-
-
-
 }
+
 .header {
   font-size: 30px;
-
-
 }
-
 
 .introducktion {
   text-align: center;
-
-
 }
+
 .information {
   width: 50%;
   height: 300px;
@@ -51,11 +35,8 @@ h2 {
   border-color: #555555;
   margin-left: auto;
   margin-right: auto;
-
 }
-.footer{
+
+.footer {
   font-size: 30px;
 }
-
-
-
