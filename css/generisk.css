@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+}
+
+#content {
+  color: #303030;
+  text-align: center;
+  padding: 50px 0 50px;
+}
+
+#content h2 {
+  padding: 0 0 40px;
+  font-size: 50px;
+}
+
+.header{
+  background-color: #ff61b0;
+  color: white;
+}
+
+.footer{
+  background-color: #ff61b0;
+  color: white;
+}
