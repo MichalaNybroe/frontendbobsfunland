@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <title>Booking</title>
   <link rel="stylesheet" href="css/generisk.css">
+  <link rel="stylesheet" href="css/booking.css">
 
   <!-- HTML include jquery - CDN til jquery library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="js/jqueryIncludeHeaderFooter.js"></script>
-  <link rel="stylesheet" href="css/booking.css">
 </head>
 
 <body>
@@ -20,16 +20,10 @@
   <h2>Booking</h2>
 
   <div>
-    <form action="" method="post">
+    <form action="" method="post" id="bookForm">
       <p>Registrer booking</p>
       <p>Aktivitet</p>
-      <select>
-        <option>ATV Kørsel</option>
-        <option>Paintball</option>
-        <option>Klatring</option>
-        <option>Kajak</option>
-        <option>Repelling</option>
-      </select>
+      <select id="activityDropDown"></select>
       <p>Dato</p>
       <input type="date" required>
       <p>Tid</p>
@@ -37,9 +31,7 @@
       <p>Deltagere</p>
       <input type="number" placeholder="eks 5" required>
       <p>Instruktør</p>
-      <select>
-        <option>Jens Madsen</option>
-      </select>
+      <select id="instructorDropDown"></select>
       <input type="submit" value="Gem">
     </form>
   </div>
@@ -62,6 +54,6 @@
 </div>
 
 <div id="footer"></div>
-
+<script src="js/booking.js"></script>
 </body>
 </html>
