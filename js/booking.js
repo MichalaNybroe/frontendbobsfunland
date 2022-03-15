@@ -47,7 +47,7 @@ async function sendJson(url, formData) {
 const activityMap = new Map();
 const dropDownActivity = document.getElementById("activityDropDown");
 
-const activityURL = "/activity";
+const activityURL = "http://localhost:8080/activity";
 
 function readAllActivities() {
   return fetch(activityURL).then((response) => response.json());
@@ -55,6 +55,7 @@ function readAllActivities() {
 
 async function setActivities() {
   const activityList = await readAllActivities();
+  console.log(activityList);
   activityList.forEach((activity, index) => {
     activityMap.set(activity.name, activity);
   });
@@ -76,7 +77,7 @@ fillDropDownActivity();
 const instructorMap = new Map();
 const dropDownInstructor = document.getElementById("instructorDropDown");
 
-const instructorURL = "/instructor";
+const instructorURL = "http://localhost:8080/instructor";
 
 function readAllInstructors() {
   return fetch(instructorURL).then((response) => response.json());
