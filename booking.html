@@ -19,24 +19,27 @@
 
   <h2>Booking</h2>
 
-  <div>
+  <div id="booking">
     <form action="" method="post" id="bookForm">
-      <p>Registrer booking</p>
-      <p>Aktivitet</p>
-      <select id="activityDropDown"></select>
-      <p>Dato</p>
-      <input type="date" required>
-      <p>Tid</p>
-      <input type="time" required>
-      <p>Deltagere</p>
-      <input type="number" placeholder="eks 5" required>
-      <p>Instruktør</p>
-      <select id="instructorDropDown"></select>
-      <input type="submit" value="Gem">
+      <p id="bookingFormHeader">Registrer booking</p>
+      <div id="bookingFormContent">
+        <p>Aktivitet</p>
+        <select id="activityDropDown"></select>
+        <p>Dato</p>
+        <input type="date" required>
+        <p>Tid</p>
+        <input type="time" required>
+        <p>Deltagere</p>
+        <input type="number" placeholder="eks 5" required>
+        <p>Instruktør</p>
+        <select id="instructorDropDown"></select>
+      </div>
+      <input type="submit" value="Gem" class="saveButton">
     </form>
   </div>
 
   <div id="bookings">
+    <h3>Bookings</h3>
     <table>
       <tr>
         <th>Ordrenummer</th>

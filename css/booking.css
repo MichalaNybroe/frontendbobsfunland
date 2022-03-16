@@ -1,3 +1,64 @@
+#booking {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ff00e0;
+  width: 250px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  background-color: #ff61b0;
+  color: white;
+}
+
+#bookingFormHeader {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0 0;
+  border-bottom: 2px solid white;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#bookingFormContent {
+  padding: 5px;
+}
+
+#bookingFormContent p {
+  padding: 10px 0 0 0;
+}
+
+#bookingFormContent input {
+  padding: 5px 0 0 0;
+}
+
+.saveButton {
+  margin: 8px;
+  border: none;
+  box-shadow: white;
+  border-radius: 5px;
+  background-color: white;
+  color: #ff00e0;
+  font-weight: bold;
+}
+
 #content table {
   margin: 0 auto;
+  width: 80%;
+}
+
+#bookings {
+  padding: 50px;
+}
+
+#bookings h3 {
+  font-size: 30px;
+  padding: 0 0 30px;
+}
+
+#bookings th {
+  background-color: #ff61b0;
+  color: white;
+}
+
+#bookings tr:nth-child(even) {
+  background-color: rgba(200, 300, 20, 0.4);
 }
