@@ -43,6 +43,9 @@ async function sendJson(url, formData) {
   return response.json();
 }
 
+
+
+
 // Opret dropdown aktiviteter
 const activityMap = new Map();
 const dropDownActivity = document.getElementById("activityDropDown");
@@ -51,6 +54,7 @@ const activityURL = "http://localhost:8080/activity";
 
 function readAllActivities() {
   return fetch(activityURL).then((response) => response.json());
+  console.log(activityURL)
 }
 
 async function setActivities() {
@@ -59,6 +63,7 @@ async function setActivities() {
   activityList.forEach((activity, index) => {
     activityMap.set(activity.name, activity);
   });
+  console.log(activityMap)
 }
 
 function fillDropDownActivity() {
@@ -72,6 +77,10 @@ function fillDropDownActivity() {
 
 setActivities();
 fillDropDownActivity();
+
+
+
+
 
 // Opret dropdown instruktør
 const instructorMap = new Map();
