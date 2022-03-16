@@ -51,6 +51,7 @@ const activityURL = "http://localhost:8080/activity";
 
 function readAllActivities() {
   return fetch(activityURL).then((response) => response.json());
+  console.log(activityURL);
 }
 
 async function setActivities() {
@@ -59,6 +60,7 @@ async function setActivities() {
   activityList.forEach((activity, index) => {
     activityMap.set(activity.name, activity);
   });
+  console.log(activityMap);
 }
 
 function fillDropDownActivity() {

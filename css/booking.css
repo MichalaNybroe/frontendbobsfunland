@@ -2,7 +2,7 @@
   border-style: solid;
   border-radius: 5px;
   border-color: #ff00e0;
-  width: 250px;
+  width: 350px;
   margin: 0 auto;
   padding: 0 0 20px;
   background-color: #ff61b0;
@@ -14,7 +14,7 @@
   font-weight: bold;
   padding: 20px 0 0;
   border-bottom: 2px solid white;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -28,6 +28,10 @@
 
 #bookingFormContent input {
   padding: 5px 0 0 0;
+}
+
+#bookingFormContent input:focus::placeholder {
+  color: transparent;
 }
 
 .saveButton {

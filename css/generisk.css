@@ -23,10 +23,8 @@ header {
   padding: 10px 0;
 }
 
-
-
 .panel {
-  margin: auto;
+  margin: 0;
   list-style-type: none;
   overflow: hidden;
   background-color: white;
@@ -37,34 +35,43 @@ header {
 }
 
 footer {
-  background-color: #ff61b0;
-  color: white;
-  font-size: 20px;
-  display: inline-flex;
-
-
-
+  background-color: white;
+  color: #555555;
 }
+
+footer table {
+  text-align: center;
+  width: 60%;
+  margin: 30px auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: #555555;
+}
+
+footer a:hover {
+  color: #ff61b0;
+}
+
 #loginHeader {
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: 30px;
   float: right;
   border-radius: 5px;
   border: 20px;
-  width: 70px;
-  margin: 20px;
+  width: 100px;
+  margin: 10px;
   border: solid;
-
-
-
 }
+
 #shopHeader {
   margin-left: 100px;
   margin-right: 200px;
   color: #555555;
-
 }
+
 #pakkerHeader{
   text-align: left;
   margin-left: 100px;
