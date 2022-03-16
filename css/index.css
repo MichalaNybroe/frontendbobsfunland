@@ -1,43 +1,45 @@
-
-body {
-  background-color: pink;
-  font-family: Futura, serif;
-  font-size: 20px;
-}
-
-h2 {
+#content h2 {
   font-size: 40px;
   text-align: center;
   padding: 50px;
   color:#303030;
 }
 
-.panel {
-  font-size: 30px;
-  text-align: left;
-}
-
-header {
-  font-size: 30px;
-}
-
 .introducktion {
   text-align: center;
+
 }
 
 .information {
-  width: 50%;
-  height: 300px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  resize: none;
-  border-color: #555;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto 0;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  text-decoration: underline;
 }
 
-footer {
-  font-size: 30px;
+#activityContainer {
+  margin: auto 0;
+  margin-top: 30px;
+}
+
+.chosenActivity h3 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.requirements {
+  margin-top: 80px;
+  float: left;
+
+
+}
+.adventureImg {
+  margin-right: 100px;
+  margin-left: 400px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  height: 100px;
+}
+#contentActivity {
+  display: inline-block;
+
 }
