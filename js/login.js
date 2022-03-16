@@ -1,36 +1,33 @@
-const out = function (str){
+const out = function (str) {
   console.log(str);
-}
+};
 
 document.addEventListener("DOMContentLoaded", creatLoginForm);
 
 let loginForm;
 
-function createLoginForm(){
+function createLoginForm() {
   loginForm = document.querySelector("#loginForm");
   loginForm.addEventListener("submit", handleLogin);
 }
 
-async function handleLogin(event){
-
+async function handleLogin(event) {
   event.preventDefault();
   //
   const form = event.currentTarget;
   const url = event.action;
 
-  try{
+  try {
     const formData = new FormData(form);
     const responseData = await postLogin(url, formData);
 
     out(responseData);
-
-  }catch (err){
+  } catch (err) {
     out(err.message);
   }
-
 }
 
-async function postLogin(url, formData){
+async function postLogin(url, formData) {
   //HVAD ER DET??
   const plainFormData = Object.fromEntries(formData.entries());
 
@@ -38,13 +35,13 @@ async function postLogin(url, formData){
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Constent-Type": "application/json"},
-    body: jsonDataString
+    headers: { "Constent-Type": "application/json" },
+    body: jsonDataString,
   };
 
-  const response = await fetch(url,fetchOptions);
+  const response = await fetch(url, fetchOptions);
 
-  if(!response){
+  if (!response) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
   }
