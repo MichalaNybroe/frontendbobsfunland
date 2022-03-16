@@ -24,7 +24,7 @@ header {
   padding: 10px 0;
 }
 
-.panel {
+header .panel {
   margin: 0;
   list-style-type: none;
   overflow: hidden;
@@ -62,10 +62,15 @@ footer a:hover {
   padding: 20px;
   float: right;
   border-radius: 5px;
-  border: 10px;
+  border: solid 4px;
   width: 70px;
   margin-right: 50px;
-  border: solid;
+}
+
+#loginHeader:hover {
+  background-color: white;
+  color: #ff61b0;
+  border-color: white;
 }
 
 #shopHeader {
