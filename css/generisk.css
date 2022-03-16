@@ -56,13 +56,14 @@ footer a:hover {
 }
 
 #loginHeader {
+  margin-top: 30px;
   text-align: center;
   color: white;
   padding: 20px;
   float: right;
   border-radius: 5px;
   border: 10px;
-  width: 100px;
+  width: 70px;
   margin-right: 50px;
   border: solid;
 }
