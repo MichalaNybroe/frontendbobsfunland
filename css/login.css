@@ -1,0 +1,31 @@
+#loginForm input{
+  margin: 0 auto 20px;
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+
+#loginForm #login{
+  background-color: #ff00e0;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#loginForm #login:hover{
+  color: white;
+  border-radius: 6px;
+  background-color: #eb7cf6;
+}
+
+#loginForm #email:focus::placeholder{
+  color: transparent;
+}
+
+#loginForm #password:focus::placeholder{
+  color: transparent;
+}
