@@ -4,6 +4,7 @@
 document.addEventListener("DomContentLoaded", createFormEventlistener);
 
 let book;
+
 function createFormEventlistener() {
   book = document.getElementById("bookForm");
   book.addEventListener("submit", createBooking);
@@ -30,7 +31,7 @@ async function sendJson(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: formDataJson,
   };
 
@@ -51,16 +52,14 @@ const activityURL = "http://localhost:8080/activity";
 
 function readAllActivities() {
   return fetch(activityURL).then((response) => response.json());
-  console.log(activityURL);
 }
 
 async function setActivities() {
   const activityList = await readAllActivities();
-  console.log(activityList);
-  activityList.forEach((activity, index) => {
+  await activityList.forEach((activity) => {
     activityMap.set(activity.name, activity);
   });
-  console.log(activityMap);
+  fillDropDownActivity();
 }
 
 function fillDropDownActivity() {
@@ -71,9 +70,6 @@ function fillDropDownActivity() {
     dropDownActivity.appendChild(option);
   }
 }
-
-setActivities();
-fillDropDownActivity();
 
 // Opret dropdown instruktør
 const instructorMap = new Map();
@@ -87,18 +83,22 @@ function readAllInstructors() {
 
 async function setInstructors() {
   const instructorList = await readAllInstructors();
-  instructorList.forEach((instructor, index) => {
+  await instructorList.forEach((instructor, index) => {
     instructorMap.set(instructor.email, instructor);
   });
+
+  fillDropDownInstructor();
 }
+
 function fillDropDownInstructor() {
+  console.log(instructorMap);
   for (const instructorKey of instructorMap.keys()) {
     const element = document.createElement("option");
-    element.textContent = instructorKey;
+    element.textContent = instructorMap.get(instructorKey).name;
     element.value = instructorMap.get(instructorKey);
     dropDownInstructor.appendChild(element);
   }
 }
 
 setActivities();
-fillDropDownInstructor();
+setInstructors();
