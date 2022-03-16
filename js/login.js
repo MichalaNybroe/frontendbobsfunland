@@ -48,3 +48,22 @@ async function postLogin(url, formData) {
 
   return response.json();
 }
+
+
+function validate(){
+  //What we get from the user
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const dbEmail = null;
+  const dbPassword = null;
+
+  if(email == dbEmail && password == dbPassword){
+    alert("Login successful")
+    window.location = "index.html";
+    return false;
+  } else {
+  window.location = "login.html";
+  return false;
+  }
+}
