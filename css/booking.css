@@ -30,18 +30,32 @@
   padding: 5px 0 0 0;
 }
 
-#bookingFormContent input:focus::placeholder {
+#bookingFormContent input:hover {
+  cursor: pointer;
+}
+
+#bookingFormContent select:hover {
+  cursor: pointer;
+}
+
+#bookingFormContent #participants:focus::placeholder {
   color: transparent;
 }
 
 .saveButton {
-  margin: 8px;
+  margin: 15px 0 8px 0;
   border: none;
   box-shadow: white;
   border-radius: 5px;
   background-color: white;
   color: #ff00e0;
   font-weight: bold;
+}
+
+.saveButton:hover {
+  background-color: #ff1493;
+  color: white;
+  cursor: pointer;
 }
 
 #content table {
