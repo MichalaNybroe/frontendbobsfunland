@@ -26,7 +26,7 @@ header {
 
 
 .panel {
-  margin: 0;
+  margin: auto;
   list-style-type: none;
   overflow: hidden;
   background-color: white;
@@ -44,18 +44,16 @@ footer {
 
 
 
-
-
 }
 #loginHeader {
   text-align: center;
   color: white;
-  padding: 30px;
+  padding: 20px;
   float: right;
   border-radius: 5px;
   border: 20px;
-  width: 100px;
-  margin: 10px;
+  width: 70px;
+  margin: 20px;
   border: solid;
 
 
