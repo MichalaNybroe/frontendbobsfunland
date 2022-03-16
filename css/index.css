@@ -1,3 +1,4 @@
+
 body {
   background-color: pink;
   font-family: Futura, serif;
@@ -16,7 +17,7 @@ h2 {
   text-align: left;
 }
 
-#header {
+header {
   font-size: 30px;
 }
 
@@ -37,6 +38,6 @@ h2 {
   margin-right: auto;
 }
 
-#footer {
+footer {
   font-size: 30px;
 }
