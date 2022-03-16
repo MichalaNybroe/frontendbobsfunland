@@ -1,13 +1,11 @@
 #loginForm input{
-  margin-left: 550px;
+  margin: 0 auto 20px;
   display: block;
-  margin-bottom: 20px;
   text-align: center;
   padding: 5px;
 }
 
 #loginForm #login{
-  margin-left: 580px;
   background-color: #ff00e0;
   border: none;
   color: white;
@@ -16,4 +14,18 @@
   text-decoration: none;
   font-size: 16px;
   border-radius: 8px;
+}
+
+#loginForm #login:hover{
+  color: white;
+  border-radius: 6px;
+  background-color: #eb7cf6;
+}
+
+#loginForm #email:focus::placeholder{
+  color: transparent;
+}
+
+#loginForm #password:focus::placeholder{
+  color: transparent;
 }
