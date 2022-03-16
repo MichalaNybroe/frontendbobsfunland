@@ -1,11 +1,14 @@
 * {
   margin: 0;
+  font-family: Futura, serif;
+  font-size: 20px;
 }
 
 #content {
   color: #303030;
   text-align: center;
   padding: 50px 0;
+  background-color: pink;
 }
 
 #content h2 {
@@ -17,10 +20,57 @@ header {
   background-color: #ff61b0;
   color: white;
   text-align: left;
-  padding: 50px 0;
+  padding: 10px 0;
+}
+
+
+
+.panel {
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: white;
+  display: block;
+  text-align: center;
+  padding: 30px 10px;
+  text-decoration: none;
 }
 
 footer {
   background-color: #ff61b0;
   color: white;
+  font-size: 20px;
+  display: inline-flex;
+
+
+
+
+
 }
+#loginHeader {
+  text-align: center;
+  color: white;
+  padding: 30px;
+  float: right;
+  border-radius: 5px;
+  border: 20px;
+  width: 100px;
+  margin: 10px;
+  border: solid;
+
+
+
+}
+#shopHeader {
+  margin-left: 100px;
+  margin-right: 200px;
+  color: #555555;
+
+}
+#pakkerHeader{
+  text-align: left;
+  margin-left: 100px;
+  color: #555555;
+
+}
+
