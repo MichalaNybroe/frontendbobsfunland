@@ -18,15 +18,20 @@ async function createBooking(event) {
   const url = form.action;
 
   try {
-    const adropdown = document.querySelector("#activityDropDown");
-    const adropdownvalue = adropdown.options[adropdown.selectedIndex].text;
+    const activityDropDown = document.querySelector("#activityDropDown");
+    const activityValue = activityDropDown.options[activityDropDown.selectedIndex].text;
 
-    const idropdown = document.querySelector("#instructorDropDown");
-    const idropdownvalue = idropdown.options[idropdown.selectedIndex].text;
+    const instructorDropDown = document.querySelector("#instructorDropDown");
+    const instructorValue = instructorDropDown.options[instructorDropDown.selectedIndex].value;
 
     const formData = new FormData(form);
-    formData.append("activity", adropdownvalue);
-    formData.append("instructor", idropdownvalue);
+
+    const activity = '{' + '"name" :' + activityValue + '}';
+
+    const instructor = '{' + '"email" :' + instructorValue + '}';
+
+    formData.append("activity", activity);
+    formData.append("instructor", instructor);
 
     console.log(formData);
     const responseData = await sendJson(url, formData);
@@ -42,9 +47,11 @@ async function sendJson(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: formDataJson,
+    headers: {"Content-Type": "application/json"},
+    body: ""
   };
+
+  fetchOptions.body = formDataJson;
 
   const response = await fetch(url, fetchOptions);
   if (!response) {
@@ -77,7 +84,7 @@ function fillDropDownActivity() {
   for (const activityKey of activityMap.keys()) {
     const option = document.createElement("option");
     option.textContent = activityKey;
-    option.value = activityMap.get(activityKey);
+    option.value = activityMap.get(activityKey).name;
     dropDownActivity.appendChild(option);
   }
 }
@@ -106,7 +113,7 @@ function fillDropDownInstructor() {
   for (const instructorKey of instructorMap.keys()) {
     const element = document.createElement("option");
     element.textContent = instructorMap.get(instructorKey).name;
-    element.value = instructorMap.get(instructorKey);
+    element.value = instructorMap.get(instructorKey).email;
     dropDownInstructor.appendChild(element);
   }
 }
