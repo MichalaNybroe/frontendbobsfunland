@@ -2,7 +2,7 @@ const out = function (str) {
   console.log(str);
 };
 
-document.addEventListener("DOMContentLoaded", creatLoginForm);
+document.addEventListener("DOMContentLoaded", createLoginForm);
 
 let loginForm;
 
@@ -15,7 +15,7 @@ async function handleLogin(event) {
   event.preventDefault();
   //
   const form = event.currentTarget;
-  const url = event.action;
+  const url = form.action;
 
   try {
     const formData = new FormData(form);
@@ -35,7 +35,7 @@ async function postLogin(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Constent-Type": "application/json" },
+    headers: { "Content-Type": "application/json" },
     body: jsonDataString,
   };
 
