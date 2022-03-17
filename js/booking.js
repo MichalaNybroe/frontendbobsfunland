@@ -16,8 +16,6 @@ async function createBooking(event) {
 
   const form = event.currentTarget;
   const url = form.action;
-  const activity = form.activity.value;
-  console.log(activity);
   console.log(form);
   console.log(url);
 
@@ -33,7 +31,6 @@ async function createBooking(event) {
 async function sendJson(url, formData) {
   console.log(formData.entries());
   const plainFormData = Object.fromEntries(formData.entries());
-  const activity = plainFormData.activity.value;
   const formDataJson = JSON.stringify(plainFormData);
 
   const fetchOptions = {
@@ -110,10 +107,30 @@ function fillDropDownInstructor() {
 setActivities();
 setInstructors();
 
+
+
+
 // Display bookings
 console.log("in display bookings");
 
+const url = 'http://localhost:8080/booking';
+const bookingMap = new Map();
+
+function readAllBookings() {
+  return fetch(url).then(response => response.json());
+}
+
+async function createBookingMap() {
+  out("show bookings");
+  const list = await readAllBookings();
+  list.forEach((booking, index) => {
+    //Dette er udhentet fra vores backend - hvorfor booking.name (det er hvad den hedder i model og i db)
+    bookingMap.set(booking.name, booking);
+  });
+}
+
 function createTableFromMap() {
+  createBookingMap();
   bookingMap.forEach((booking) => addRow(booking));
 }
 
@@ -123,4 +140,29 @@ function addRow(booking) {
 
   let row = bookingTable.insertRow(rowCount);
   let cell = row.insertCell(columnCount++);
+  cell.innerText = booking.customerName;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.customerEmail;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.customerPhone;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.orderNumber;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.date;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.time;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.activity;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.participants;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking.instructor;
 }
