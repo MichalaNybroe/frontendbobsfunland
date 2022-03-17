@@ -33,12 +33,12 @@ async function createBooking(event) {
 async function sendJson(url, formData) {
   console.log(formData.entries());
   const plainFormData = Object.fromEntries(formData.entries());
-const activity = plainFormData.activity.value;
+  const activity = plainFormData.activity.value;
   const formDataJson = JSON.stringify(plainFormData);
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
+    headers: { "Content-Type": "application/json" },
     body: formDataJson,
   };
 
@@ -110,12 +110,11 @@ function fillDropDownInstructor() {
 setActivities();
 setInstructors();
 
-
 // Display bookings
 console.log("in display bookings");
 
 function createTableFromMap() {
-  bookingMap.forEach(booking => addRow(booking));
+  bookingMap.forEach((booking) => addRow(booking));
 }
 
 function addRow(booking) {
@@ -124,5 +123,4 @@ function addRow(booking) {
 
   let row = bookingTable.insertRow(rowCount);
   let cell = row.insertCell(columnCount++);
-
 }
