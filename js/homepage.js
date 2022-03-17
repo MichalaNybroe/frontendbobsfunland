@@ -1,4 +1,3 @@
-
 //Dropdown med aktiviteter
 const activityMap = new Map();
 const dropDownActivity = document.getElementById("activityDropDown");
@@ -27,19 +26,16 @@ function fillDropDownActivity() {
 }
 setActivities();
 
-
 //information om aktiviteter
 
 async function getInformationActivity() {
-
   let activity;
 
   function EventlisteneActivity() {
     activity = document.getElementById("dropdownActivity");
     console.log(activity);
-    activity.addEventListener("unclick",chooseActivity);
-    o
-
+    activity.addEventListener("unclick", chooseActivity);
+    o;
   }
 
   async function selectedActivity(event) {
@@ -50,21 +46,6 @@ async function getInformationActivity() {
     console.log(form);
     console.log(url);
 
-
-
-
-addEventListener(dropDownActivity)
+    addEventListener(dropDownActivity);
   }
-
-
-
-
-
-
 }
-
-
-
-
-
-
