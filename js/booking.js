@@ -117,11 +117,11 @@ setInstructors();
 // Display bookings
 console.log("in display bookings");
 
-const url = 'http://localhost:8080/booking';
+const url = "http://localhost:8080/booking";
 const bookingMap = new Map();
 
 function readAllBookings() {
-  return fetch(url).then(response => response.json());
+  return fetch(url).then((response) => response.json());
 }
 
 async function createBookingMap() {
