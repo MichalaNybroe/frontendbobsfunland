@@ -43,7 +43,7 @@ async function sendJson(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
+    headers: { "Content-Type": "application/json" },
     body: formDataJson,
   };
 
