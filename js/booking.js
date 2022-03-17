@@ -16,13 +16,18 @@ async function createBooking(event) {
 
   const form = event.currentTarget;
   const url = form.action;
-  const activity = form.activity.value;
-  console.log(activity);
-  console.log(form);
-  console.log(url);
 
   try {
+    const adropdown = document.querySelector("#activityDropDown");
+    const adropdownvalue = adropdown.options[adropdown.selectedIndex].text;
+
+    const idropdown = document.querySelector("#instructorDropDown");
+    const idropdownvalue = idropdown.options[idropdown.selectedIndex].text;
+
     const formData = new FormData(form);
+    formData.append("activity", adropdownvalue);
+    formData.append("instructor", idropdownvalue);
+
     console.log(formData);
     const responseData = await sendJson(url, formData);
   } catch (err) {
@@ -38,7 +43,7 @@ async function sendJson(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: formDataJson,
   };
 
