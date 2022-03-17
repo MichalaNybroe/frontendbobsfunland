@@ -20,6 +20,7 @@
   color: white;
   border-radius: 6px;
   background-color: #eb7cf6;
+  cursor: pointer;
 }
 
 #loginForm #email:focus::placeholder{
