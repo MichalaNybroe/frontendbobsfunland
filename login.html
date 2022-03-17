@@ -8,6 +8,7 @@
   <!-- HTML include jquery - CDN til jquery library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="js/jqueryIncludeHeaderFooter.js"></script>
+  <script src="js/login.js" defer></script>
 </head>
 <body>
 
@@ -18,9 +19,9 @@
   <h2>Login</h2>
 
   <form action="http://localhost:8080/login" method="post" id="loginForm">
-    <input type="email" placeholder="example@mail.com" required id="email">
-    <input type="password" placeholder="Enter password" required id="password">
-    <input type="submit" value="Login" id="login">
+    <input name="email" type="email" placeholder="example@mail.com" required id="email">
+    <input name="password" type="password" placeholder="Enter password" required id="password">
+    <button type="submit" value="Login" id="login">Login</button>
   </form>
 
 </div>
