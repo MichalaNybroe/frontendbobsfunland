@@ -16,11 +16,18 @@ async function createBooking(event) {
 
   const form = event.currentTarget;
   const url = form.action;
-  console.log(form);
-  console.log(url);
 
   try {
+    const adropdown = document.querySelector("#activityDropDown");
+    const adropdownvalue = adropdown.options[adropdown.selectedIndex].text;
+
+    const idropdown = document.querySelector("#instructorDropDown");
+    const idropdownvalue = idropdown.options[idropdown.selectedIndex].text;
+
     const formData = new FormData(form);
+    formData.append("activity", adropdownvalue);
+    formData.append("instructor", idropdownvalue);
+
     console.log(formData);
     const responseData = await sendJson(url, formData);
   } catch (err) {
@@ -106,9 +113,6 @@ function fillDropDownInstructor() {
 
 setActivities();
 setInstructors();
-
-
-
 
 // Display bookings
 console.log("in display bookings");
