@@ -7,6 +7,7 @@ let book;
 
 function createFormEventlistener() {
   book = document.getElementById("bookForm");
+  console.log(book);
   book.addEventListener("submit", createBooking);
 }
 
@@ -15,6 +16,8 @@ async function createBooking(event) {
 
   const form = event.currentTarget;
   const url = form.action;
+  console.log(form);
+  console.log(url);
 
   try {
     const formData = await new FormData(form);
