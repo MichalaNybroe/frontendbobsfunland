@@ -26,12 +26,25 @@ async function createBooking(event) {
 
     const formData = new FormData(form);
 
-    const activity = '{' + '"name" :' + activityValue + '}';
+    /*const activity = '{' + '"' + 'name' + '":' + activityValue + '}';
 
-    const instructor = '{' + '"email" :' + instructorValue + '}';
+    const instructor = '{' + '"' + 'email' + '":' + instructorValue + '}';
+    */
 
-    formData.append("activity", activity);
-    formData.append("instructor", instructor);
+    const activity = new Object();
+    activity.name = activityValue;
+
+    const instructor = new Object();
+    instructor.email = instructorValue;
+
+    const activityJson = JSON.stringify(activity);
+    const instructorJson = JSON.stringify(instructor);
+
+
+
+
+    formData.append("activity", activityJson);
+    formData.append("instructor", instructorJson);
 
     console.log(formData);
     const responseData = await sendJson(url, formData);
@@ -132,19 +145,19 @@ function readAllBookings() {
 }
 
 async function createBookingMap() {
-  out("show bookings");
   const list = await readAllBookings();
   list.forEach((booking, index) => {
     //Dette er udhentet fra vores backend - hvorfor booking.name (det er hvad den hedder i model og i db)
-    bookingMap.set(booking.name, booking);
+    bookingMap.set(booking.orderNumber, booking);
   });
 }
 
-function createTableFromMap() {
-  createBookingMap();
+async function createTableFromMap() {
+  await createBookingMap();
   bookingMap.forEach((booking) => addRow(booking));
 }
 
+const bookingTable = document.getElementById('tableBooking');
 function addRow(booking) {
   const rowCount = bookingTable.rows.length;
   let columnCount = 0;
@@ -169,11 +182,13 @@ function addRow(booking) {
   cell.innerText = booking.time;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.activity;
+  cell.innerText = booking.activity.name;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.participants;
+  cell.innerText = booking.nrOfParticipants;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.instructor;
+  cell.innerText = booking.instructor.email;
 }
+
+createTableFromMap();
