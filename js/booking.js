@@ -1,11 +1,11 @@
 "use strict";
 
 // Send booking data til backend
-document.addEventListener("DomContentLoaded", createFormEventlistener);
+document.addEventListener("DOMContentLoaded", createFormEventListener);
 
 let book;
 
-function createFormEventlistener() {
+function createFormEventListener() {
   book = document.getElementById("bookForm");
   console.log(book);
   book.addEventListener("submit", createBooking);
@@ -16,25 +16,29 @@ async function createBooking(event) {
 
   const form = event.currentTarget;
   const url = form.action;
+  const activity = form.activity.value;
+  console.log(activity);
   console.log(form);
   console.log(url);
 
   try {
-    const formData = await new FormData(form);
-    sendJson(url, formData);
+    const formData = new FormData(form);
+    console.log(formData);
+    const responseData = await sendJson(url, formData);
   } catch (err) {
     alert("Noget gik galt ved bookning");
   }
 }
 
 async function sendJson(url, formData) {
+  console.log(formData.entries());
   const plainFormData = Object.fromEntries(formData.entries());
-
+const activity = plainFormData.activity.value;
   const formDataJson = JSON.stringify(plainFormData);
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: formDataJson,
   };
 
@@ -105,3 +109,20 @@ function fillDropDownInstructor() {
 
 setActivities();
 setInstructors();
+
+
+// Display bookings
+console.log("in display bookings");
+
+function createTableFromMap() {
+  bookingMap.forEach(booking => addRow(booking));
+}
+
+function addRow(booking) {
+  const rowCount = bookingTable.rows.length;
+  let columnCount = 0;
+
+  let row = bookingTable.insertRow(rowCount);
+  let cell = row.insertCell(columnCount++);
+
+}

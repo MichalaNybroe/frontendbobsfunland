@@ -24,15 +24,15 @@
       <p id="bookingFormHeader">Registrer booking</p>
       <div id="bookingFormContent">
         <p>Aktivitet</p>
-        <select id="activityDropDown"></select>
+        <select name="activity" id="activityDropDown"></select>
         <p>Dato</p>
-        <input type="date" required>
+        <input name="date" type="date" required>
         <p>Tid</p>
-        <input type="time" required>
+        <input name="time" type="time" required>
         <p>Deltagere</p>
-        <input type="text" placeholder="eks 5" required id="participants">
+        <input name="participants" type="text" placeholder="eks 5" required id="participants">
         <p>Instruktør</p>
-        <select id="instructorDropDown"></select>
+        <select name="instructor" id="instructorDropDown"></select>
       </div>
       <input type="submit" value="Gem" class="saveButton">
     </form>
