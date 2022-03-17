@@ -8,7 +8,7 @@ let loginForm;
 
 function createLoginForm() {
   loginForm = document.querySelector("#loginForm");
-  loginForm.addEventListener('submit', handleLogin);
+  loginForm.addEventListener("submit", handleLogin);
 }
 
 async function handleLogin(event) {
