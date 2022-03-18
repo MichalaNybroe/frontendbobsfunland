@@ -38,8 +38,12 @@
   cursor: pointer;
 }
 
-#bookingFormContent #participants:focus::placeholder {
+#bookingFormContent .input:focus::placeholder {
   color: transparent;
+}
+
+.input {
+  max-width: 170px;
 }
 
 .saveButton {
