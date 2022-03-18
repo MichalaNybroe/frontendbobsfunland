@@ -18,33 +18,36 @@ async function createBooking(event) {
   const url = form.action;
 
   try {
-    const adropdown = document.querySelector("#activityDropDown");
-    const adropdownvalue = adropdown.options[adropdown.selectedIndex].text;
+    const activityDropDown = document.querySelector("#activityDropDown");
+    const activityValue =
+      activityDropDown.options[activityDropDown.selectedIndex].text;
 
-    const idropdown = document.querySelector("#instructorDropDown");
-    const idropdownvalue = idropdown.options[idropdown.selectedIndex].text;
+    const instructorDropDown = document.querySelector("#instructorDropDown");
+    const instructorValue =
+      instructorDropDown.options[instructorDropDown.selectedIndex].value;
 
     const formData = new FormData(form);
-    formData.append("activity", adropdownvalue);
-    formData.append("instructor", idropdownvalue);
 
-    console.log(formData);
-    const responseData = await sendJson(url, formData);
+    const plainFormData = Object.fromEntries(formData.entries());
+    plainFormData.instructor = { email: instructorValue };
+    plainFormData.activity = { name: activityValue };
+
+    await sendJson(url, plainFormData);
   } catch (err) {
     alert("Noget gik galt ved bookning");
   }
 }
 
-async function sendJson(url, formData) {
-  console.log(formData.entries());
-  const plainFormData = Object.fromEntries(formData.entries());
-  const formDataJson = JSON.stringify(plainFormData);
+async function sendJson(url, data) {
+  const formDataJson = JSON.stringify(data);
 
   const fetchOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: formDataJson,
+    body: "",
   };
+
+  fetchOptions.body = formDataJson;
 
   const response = await fetch(url, fetchOptions);
   if (!response) {
@@ -54,65 +57,6 @@ async function sendJson(url, formData) {
 
   return response.json();
 }
-
-// Opret dropdown aktiviteter
-const activityMap = new Map();
-const dropDownActivity = document.getElementById("activityDropDown");
-
-const activityURL = "http://localhost:8080/activity";
-
-function readAllActivities() {
-  return fetch(activityURL).then((response) => response.json());
-}
-
-async function setActivities() {
-  const activityList = await readAllActivities();
-  await activityList.forEach((activity) => {
-    activityMap.set(activity.name, activity);
-  });
-  fillDropDownActivity();
-}
-
-function fillDropDownActivity() {
-  for (const activityKey of activityMap.keys()) {
-    const option = document.createElement("option");
-    option.textContent = activityKey;
-    option.value = activityMap.get(activityKey);
-    dropDownActivity.appendChild(option);
-  }
-}
-
-// Opret dropdown instruktør
-const instructorMap = new Map();
-const dropDownInstructor = document.getElementById("instructorDropDown");
-
-const instructorURL = "http://localhost:8080/instructor";
-
-function readAllInstructors() {
-  return fetch(instructorURL).then((response) => response.json());
-}
-
-async function setInstructors() {
-  const instructorList = await readAllInstructors();
-  await instructorList.forEach((instructor, index) => {
-    instructorMap.set(instructor.email, instructor);
-  });
-
-  fillDropDownInstructor();
-}
-
-function fillDropDownInstructor() {
-  console.log(instructorMap);
-  for (const instructorKey of instructorMap.keys()) {
-    const element = document.createElement("option");
-    element.textContent = instructorMap.get(instructorKey).name;
-    element.value = instructorMap.get(instructorKey);
-    dropDownInstructor.appendChild(element);
-  }
-}
-
-setActivities();
-setInstructors();
 
 // Display bookings
 console.log("in display bookings");
@@ -125,19 +69,19 @@ function readAllBookings() {
 }
 
 async function createBookingMap() {
-  out("show bookings");
   const list = await readAllBookings();
   list.forEach((booking, index) => {
     //Dette er udhentet fra vores backend - hvorfor booking.name (det er hvad den hedder i model og i db)
-    bookingMap.set(booking.name, booking);
+    bookingMap.set(booking.orderNumber, booking);
   });
 }
 
-function createTableFromMap() {
-  createBookingMap();
+async function createTableFromMap() {
+  await createBookingMap();
   bookingMap.forEach((booking) => addRow(booking));
 }
 
+const bookingTable = document.getElementById("tableBooking");
 function addRow(booking) {
   const rowCount = bookingTable.rows.length;
   let columnCount = 0;
@@ -162,11 +106,13 @@ function addRow(booking) {
   cell.innerText = booking.time;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.activity;
+  cell.innerText = booking.activity.name;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.participants;
+  cell.innerText = booking.nrOfParticipants;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.instructor;
+  cell.innerText = booking.instructor.email;
 }
+
+createTableFromMap();

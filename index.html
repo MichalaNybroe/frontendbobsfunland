@@ -27,35 +27,28 @@
 </div>
 
 
-
-
 <div id="activityContainer">
   <h3>Aktiviteter</h3>
-  <select id="dropdownActivity">
-    <option>ATV Kørsel</option>
-    <option>Paintball</option>
-    <option>Klatring</option>
-    <option>Kajak</option>
-    <option>Repelling</option>
-  </select>
+  <select id="activityDropDown"></select>
 
 
   <div class="chosenActivity">
-    <h3>Valgt Aktivitet:</h3>
+    <h3 id="activityName">Valgt Aktivitet:</h3>
     <div id ="contentActivity" >
     <div class="requirements">
       <h4> Krav for aktivtitet</h4>
-      <p> Alder:</p>
-      <p> Højde:</p>
+      <p id="age"> Alder:</p>
+      <p id="height"> Højde:</p>
     </div>
 
 
     <div class ="adventureImg">
-      <img src="images/adventure.jpg" width="400px">
+      <img src="images/adventure.jpg" width="400px" id="activityImage">
     </div>
 
     <div class="information">
       <h4> Information om aktivitet:</h4>
+      <p id="activityInformation"></p>
 
     </div>
       <div id="bookingInformation">
@@ -71,5 +64,7 @@
 
 <div id="footer"></div>
 
+<script src="js/dropdownactivityfill.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
