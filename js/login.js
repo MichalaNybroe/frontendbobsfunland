@@ -38,34 +38,21 @@ async function handleLogin(event) {
 }
 
 async function postLogin(url, formData) {
-  //HVAD ER DET??
-  const plainFormData = Object.fromEntries(formData.entries());
-  out("xxxxx");
-  out(plainFormData);
 
-  const jsonDataString = JSON.stringify(plainFormData);
-  out(jsonDataString);
+  const loginInfo = Object.fromEntries(formData.entries());
+  out(loginInfo);
+
+  const jsonDataString = JSON.stringify(loginInfo);
 
   const fetchOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {"Content-Type": "application/json"},
     body: jsonDataString,
   };
+  //window.location("/index");
 
-  //set local storage
-  const localStorage = window.localStorage;
-  // in
-  localStorage.setItem();
-  out("hallo");
-  out(localStorage);
-
-  //redirecting to homepage - virker ikke
-  window.location("/index");
-
-  out(fetchOptions.body);
   const response = await fetch(url, fetchOptions);
 
-  out(response);
   if (!response) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
