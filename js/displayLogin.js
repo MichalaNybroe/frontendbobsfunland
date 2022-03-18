@@ -1,10 +1,9 @@
 const loginHeader = document.querySelector("#loginHeader");
 
-loginHeader.addEventListener("click", displayHiddenHeaderTags);
+displayHiddenHeaderTags();
 
 function displayHiddenHeaderTags() {
-  let loginHeaderText = loginHeader.textContent.toLowerCase();
-  if (loginHeaderText === "login") {
+  if (localStorage.getItem("login")) {
     document.querySelector("#bookingHeader").style.display = "inline-block";
     loginHeader.textContent = "Logout";
   } else {

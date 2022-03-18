@@ -55,6 +55,18 @@ async function postLogin(url, formData) {
   if (!response) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
+  } else {
+
+    // Put the object into storage
+    localStorage.setItem("login", JSON.stringify(loginInfo));
+    window.location.replace("index.html");
+
+    //MIS
+    // Retrieve the object from storage
+    /*let retrievedObject = localStorage.getItem('login');
+
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+    console.log('retrievedObject: ', JSON.parse(retrievedObject).email);*/
   }
 
   return response.json();
