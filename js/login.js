@@ -56,7 +56,6 @@ async function postLogin(url, formData) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
   } else {
-
     // Put the object into storage
     localStorage.setItem("login", JSON.stringify(loginInfo));
     window.location.replace("index.html");
