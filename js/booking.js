@@ -19,16 +19,18 @@ async function createBooking(event) {
 
   try {
     const activityDropDown = document.querySelector("#activityDropDown");
-    const activityValue = activityDropDown.options[activityDropDown.selectedIndex].text;
+    const activityValue =
+      activityDropDown.options[activityDropDown.selectedIndex].text;
 
     const instructorDropDown = document.querySelector("#instructorDropDown");
-    const instructorValue = instructorDropDown.options[instructorDropDown.selectedIndex].value;
+    const instructorValue =
+      instructorDropDown.options[instructorDropDown.selectedIndex].value;
 
     const formData = new FormData(form);
 
     const plainFormData = Object.fromEntries(formData.entries());
-    plainFormData.instructor = {email: instructorValue};
-    plainFormData.activity = {name: activityValue};
+    plainFormData.instructor = { email: instructorValue };
+    plainFormData.activity = { name: activityValue };
 
     await sendJson(url, plainFormData);
   } catch (err) {
@@ -41,8 +43,8 @@ async function sendJson(url, data) {
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: ""
+    headers: { "Content-Type": "application/json" },
+    body: "",
   };
 
   fetchOptions.body = formDataJson;
@@ -79,7 +81,7 @@ async function createTableFromMap() {
   bookingMap.forEach((booking) => addRow(booking));
 }
 
-const bookingTable = document.getElementById('tableBooking');
+const bookingTable = document.getElementById("tableBooking");
 function addRow(booking) {
   const rowCount = bookingTable.rows.length;
   let columnCount = 0;
