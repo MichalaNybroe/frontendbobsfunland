@@ -26,37 +26,18 @@ async function createBooking(event) {
 
     const formData = new FormData(form);
 
-    /*const activity = '{' + '"' + 'name' + '":' + activityValue + '}';
+    const plainFormData = Object.fromEntries(formData.entries());
+    plainFormData.instructor = {email: instructorValue};
+    plainFormData.activity = {name: activityValue};
 
-    const instructor = '{' + '"' + 'email' + '":' + instructorValue + '}';
-    */
-
-    const activity = new Object();
-    activity.name = activityValue;
-
-    const instructor = new Object();
-    instructor.email = instructorValue;
-
-    const activityJson = JSON.stringify(activity);
-    const instructorJson = JSON.stringify(instructor);
-
-
-
-
-    formData.append("activity", activityJson);
-    formData.append("instructor", instructorJson);
-
-    console.log(formData);
-    const responseData = await sendJson(url, formData);
+    await sendJson(url, plainFormData);
   } catch (err) {
     alert("Noget gik galt ved bookning");
   }
 }
 
-async function sendJson(url, formData) {
-  console.log(formData.entries());
-  const plainFormData = Object.fromEntries(formData.entries());
-  const formDataJson = JSON.stringify(plainFormData);
+async function sendJson(url, data) {
+  const formDataJson = JSON.stringify(data);
 
   const fetchOptions = {
     method: "POST",
@@ -74,65 +55,6 @@ async function sendJson(url, formData) {
 
   return response.json();
 }
-
-// Opret dropdown aktiviteter
-const activityMap = new Map();
-const dropDownActivity = document.getElementById("activityDropDown");
-
-const activityURL = "http://localhost:8080/activity";
-
-function readAllActivities() {
-  return fetch(activityURL).then((response) => response.json());
-}
-
-async function setActivities() {
-  const activityList = await readAllActivities();
-  await activityList.forEach((activity) => {
-    activityMap.set(activity.name, activity);
-  });
-  fillDropDownActivity();
-}
-
-function fillDropDownActivity() {
-  for (const activityKey of activityMap.keys()) {
-    const option = document.createElement("option");
-    option.textContent = activityKey;
-    option.value = activityMap.get(activityKey).name;
-    dropDownActivity.appendChild(option);
-  }
-}
-
-// Opret dropdown instruktør
-const instructorMap = new Map();
-const dropDownInstructor = document.getElementById("instructorDropDown");
-
-const instructorURL = "http://localhost:8080/instructor";
-
-function readAllInstructors() {
-  return fetch(instructorURL).then((response) => response.json());
-}
-
-async function setInstructors() {
-  const instructorList = await readAllInstructors();
-  await instructorList.forEach((instructor, index) => {
-    instructorMap.set(instructor.email, instructor);
-  });
-
-  fillDropDownInstructor();
-}
-
-function fillDropDownInstructor() {
-  console.log(instructorMap);
-  for (const instructorKey of instructorMap.keys()) {
-    const element = document.createElement("option");
-    element.textContent = instructorMap.get(instructorKey).name;
-    element.value = instructorMap.get(instructorKey).email;
-    dropDownInstructor.appendChild(element);
-  }
-}
-
-setActivities();
-setInstructors();
 
 // Display bookings
 console.log("in display bookings");
