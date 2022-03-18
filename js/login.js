@@ -38,7 +38,6 @@ async function handleLogin(event) {
 }
 
 async function postLogin(url, formData) {
-
   const loginInfo = Object.fromEntries(formData.entries());
   out(loginInfo);
 
@@ -46,7 +45,7 @@ async function postLogin(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
+    headers: { "Content-Type": "application/json" },
     body: jsonDataString,
   };
   //window.location("/index");
