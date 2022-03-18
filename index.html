@@ -10,6 +10,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="js/jqueryIncludeHeaderFooter.js"></script>
 
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/bced513090.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -18,53 +21,52 @@
 
 <div id="content">
 
-<h2>Bob's Fun Land</h2>
+  <h2>Bob's Fun Land</h2>
 
-<div class ="introducktion">
-  <p> Velkommen til Bobs Fun Land!</p>
-  <p> Vi tilbyder mange forskellige adventure aktiviteter. </p>
-  <p> Du kan læse og booke den aktivitet du ønsker herunder.</p>
-</div>
-
-
-<div id="activityContainer">
-  <h3>Aktiviteter</h3>
-  <select id="activityDropDown"></select>
+  <div class="introducktion">
+    <p> Velkommen til Bobs Fun Land!</p>
+    <p> Vi tilbyder mange forskellige adventure aktiviteter. </p>
+    <p> Du kan læse og booke den aktivitet du ønsker herunder.</p>
+  </div>
 
 
-  <div class="chosenActivity">
-    <h3 id="activityName">Valgt Aktivitet:</h3>
-    <div id ="contentActivity" >
-    <div class="requirements">
-      <h4> Krav for aktivtitet</h4>
-      <p id="age"> Alder:</p>
-      <p id="height"> Højde:</p>
-    </div>
+  <div id="activityContainer">
+    <h3>Aktiviteter</h3>
+    <select id="activityDropDown"></select>
 
 
-    <div class ="adventureImg">
-      <img src="images/adventure.jpg" width="400px" id="activityImage">
-    </div>
+    <div class="chosenActivity">
+      <h3 id="activityName">Valgt Aktivitet:</h3>
+      <div id="contentActivity">
+        <div class="requirements">
+          <h4> Krav for aktivtitet</h4>
+          <p id="age"> Alder:</p>
+          <p id="height"> Højde:</p>
+        </div>
 
-    <div class="information">
-      <h4> Information om aktivitet:</h4>
-      <p id="activityInformation"></p>
 
-    </div>
+        <div class="adventureImg">
+          <img src="images/adventure.jpg" width="400px" id="activityImage">
+        </div>
+
+        <div class="information">
+          <h4> Information om aktivitet:</h4>
+          <p id="activityInformation"></p>
+        </div>
+      </div>
+
       <div id="bookingInformation">
         <p> Ønsker du at lave en booking </p>
         <p>så send en mail til trollmax@outlook.dk eller ring på; +45 27850346 </p>
         <p>Med følgende information; </p>
         <p>Den ønskede aktivitet, dit navn, telefonnummer, mail, antal deltagere, dato og tid.</p>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
-</div>
-</div>
+    <div id="footer"></div>
 
-<div id="footer"></div>
-
-<script src="js/dropdownactivityfill.js"></script>
-<script src="js/index.js"></script>
+    <script src="js/dropdownactivityfill.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

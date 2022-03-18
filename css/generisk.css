@@ -73,16 +73,14 @@ footer a:hover {
   border-color: white;
 }
 
-#shopHeader {
-  margin-left: 100px;
-  margin-right: 200px;
+.panel a {
+  text-decoration: none;
   color: #555555;
+  width: 30%;
+  display: inline-block;
 }
 
-#pakkerHeader{
-  text-align: left;
-  margin-left: 100px;
-  color: #555555;
-
+.panel {
+width: 100%;
 }
 

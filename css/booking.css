@@ -10,9 +10,9 @@
 }
 
 #bookingFormHeader {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  padding: 20px 0 0;
+  padding: 20px 0 0 0;
   border-bottom: 2px solid #ff61b0;
   width: 50%;
   margin: 0 auto;
@@ -23,11 +23,12 @@
 }
 
 #bookingFormContent p {
-  padding: 10px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 #bookingFormContent input {
   padding: 5px 0 0 0;
+  margin: 5px 0;
 }
 
 #bookingFormContent input:hover {

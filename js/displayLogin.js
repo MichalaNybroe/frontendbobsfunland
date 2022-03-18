@@ -6,9 +6,9 @@ function displayHiddenHeaderTags() {
   let loginHeaderText = loginHeader.textContent.toLowerCase();
   if (loginHeaderText === "login") {
     document.querySelector("#bookingHeader").style.display = "inline-block";
-    loginHeader.textContent = "logout";
+    loginHeader.textContent = "Logout";
   } else {
     document.querySelector("#bookingHeader").style.display = "none";
-    loginHeader.textContent = "login";
+    loginHeader.textContent = "Login";
   }
 }
