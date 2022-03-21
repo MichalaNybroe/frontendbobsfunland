@@ -12,7 +12,7 @@
 
 .information {
   margin: auto 0;
-  margin-bottom: 500px;
+  margin-bottom: 400px;
   margin-top: 100px;
   text-decoration: underline;
 }
@@ -47,9 +47,8 @@
 
 }
 #bookingInformation {
-
-  margin-bottom: 100px;
-  margin-top: 500px;
+  margin-bottom: 70px;
+  margin-top: 10px;
   text-align:center;
 
 }
