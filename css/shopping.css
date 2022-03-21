@@ -1,0 +1,62 @@
+
+
+.merch {
+  text-align: center;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 150px;
+  border: 1px solid;
+  padding: 200px
+
+}
+
+.food{
+  float-displace: auto;
+  line-height: 400px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border: 1px solid;
+  padding: 300px
+
+}
+.drinks{
+  white-space:break-spaces ;
+  text-align-all: center;
+  line-height: 400px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  border: 1px solid;
+  padding: 200px
+}
+
+h1{
+  font-size: 45px;
+  margin-bottom: 40px;
+
+}
+
+h2{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 30px;
+  margin-bottom: 40px;
+
+}
+h3{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+h4{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+
+}
