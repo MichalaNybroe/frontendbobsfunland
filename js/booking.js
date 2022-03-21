@@ -76,6 +76,7 @@ async function createBookingMap() {
   });
 }
 
+
 async function createTableFromMap() {
   await createBookingMap();
   bookingMap.forEach((booking) => addRow(booking));
@@ -113,6 +114,18 @@ function addRow(booking) {
 
   cell = row.insertCell(columnCount++);
   cell.innerText = booking.instructor.email;
+
+  cell = row.insertCell(columnCount++);
+  cell.innerText = booking
 }
 
 createTableFromMap();
+
+
+let deleteBooking;
+deleteBooking = document.getElementById("deleteButton")
+deleteBooking.addEventListener("click", deleteBooking);
+async function deleteBooking(booking) {
+  booking.preventDefault();
+
+}
