@@ -76,7 +76,6 @@ async function createBookingMap() {
   });
 }
 
-
 async function createTableFromMap() {
   await createBookingMap();
   bookingMap.forEach((booking) => addRow(booking));
@@ -86,9 +85,9 @@ const bookingTable = document.getElementById("tableBooking");
 function addRow(booking) {
   const rowCount = bookingTable.rows.length;
   let columnCount = 0;
-
   let row = bookingTable.insertRow(rowCount);
   let cell = row.insertCell(columnCount++);
+
   cell.innerText = booking.customerName;
 
   cell = row.insertCell(columnCount++);
@@ -115,17 +114,47 @@ function addRow(booking) {
   cell = row.insertCell(columnCount++);
   cell.innerText = booking.instructor.email;
 
+  //Her skal vi vel have vores delete button, men hvordan?
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking
+  const deleteButton = document.createElement("input");
+  deleteButton.type = "button";
+  deleteButton.setAttribute("value", "Slet Bookning");
+  deleteButton.onclick = function () {
+    deleteBooking(booking, rowCount, row);
+  };
+  cell.appendChild(deleteButton);
+}
+
+//let deBooking;
+//delBooking = document.getElementById("deleteButton");
+//delBooking.addEventListener("click", deleteBooking);
+
+async function deleteBooking(booking, rowCount, row) {
+  booking.preventDefault();
+
+  const response = await restDeleteBooking(booking);
+  bookingTable.deleteRow(row.rowIndex);
+}
+
+async function restDeleteBooking(booking) {
+  //Jeg er lidt i tvivl om hvliken url vi skal bruge...
+  const url = "http://localhost:8080/booking/" + booking;
+
+  const fetchOption = {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: "",
+  };
+
+  const response = await fetch(url, fetchOption);
+
+  if (!response) {
+    out("Something went wrong in restDeleteBooking");
+  }
+
+  return response;
 }
 
 createTableFromMap();
-
-
-let deleteBooking;
-deleteBooking = document.getElementById("deleteButton")
-deleteBooking.addEventListener("click", deleteBooking);
-async function deleteBooking(booking) {
-  booking.preventDefault();
-
-}
