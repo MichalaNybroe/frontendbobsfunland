@@ -9,7 +9,7 @@
   color: #303030;
   text-align: center;
   padding: 50px 0;
-  background-color: pink;
+  background-color: darkseagreen;
 }
 
 #content h2 {
@@ -18,7 +18,7 @@
 }
 
 header {
-  background-color: #ff61b0;
+  background-color: #c0f0f7;
   color: white;
   text-align: left;
   padding: 10px 0;
@@ -36,23 +36,24 @@ header .panel {
 }
 
 footer {
-  background-color: white;
-  color: #555555;
+  background-color: saddlebrown;
+  color: white;
 }
 
 footer table {
   text-align: center;
-  width: 60%;
-  margin: 30px auto;
+  width: 70%;
+  margin: 0px auto;
+  padding: 30px 10px;
 }
 
 footer a {
   text-decoration: none;
-  color: #555555;
+  color: white;
 }
 
 footer a:hover {
-  color: #ff61b0;
+  color: darkseagreen;
 }
 
 #loginHeader {
@@ -69,8 +70,8 @@ footer a:hover {
 
 #loginHeader:hover {
   background-color: white;
-  color: #ff61b0;
-  border-color: white;
+  color:darkseagreen ;
+  border-color: darkseagreen;
 }
 
 .panel a {
