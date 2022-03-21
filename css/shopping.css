@@ -13,7 +13,7 @@
 }
 
 .food{
-  float-displace: auto;
+  text-align: center;
   line-height: 400px;
   width: 95%;
   margin-left: auto;
@@ -21,7 +21,11 @@
   margin-top: 70px;
   margin-bottom: 70px;
   border: 1px solid;
-  padding: 300px
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 40px;
+
 
 }
 .drinks{
@@ -31,9 +35,13 @@
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  margin-top: 100px;
   border: 1px solid;
-  padding: 200px
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 40px;
+
 }
 
 h1{
