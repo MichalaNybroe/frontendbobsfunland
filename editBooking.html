@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+  <link rel="stylesheet" href="css/generisk.css">
+  <link rel="stylesheet" href="css/booking.css">
+
+  <!-- HTML include jquery - CDN til jquery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/jqueryIncludeHeaderFooter.js"></script>
+
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/bced513090.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div id="content">
+
+  <h2>Booking</h2>
+
+  <div id="booking">
+    <form action="http://localhost:8080/editBooking" method="post" id="bookForm">
+      <p id="bookingFormHeader">Rediger booking</p>
+      <div id="bookingFormContent">
+        <p>Kunde information</p>
+        <input name="customerName" type="text" placeholder="eks Kirstine" class="input" id="customerName">
+        <input name="customerEmail" type="text" placeholder="eks Kirstine@mail.dk" class="input" id="customerEmail">
+        <input name="customerPhone" type="text" placeholder="50939393" class="input" id="customerPhone">
+
+        <p>Aktivitet</p>
+        <select id="activityDropDown"></select>
+        <p>Dato</p>
+        <input name="date" type="date" id="date" required>
+        <p>Tid</p>
+        <input name="time" type="time" id="time" required>
+        <p>Deltagere</p>
+        <input name="participants" type="text" placeholder="eks 5" required class="input" id="participants">
+        <p>Instruktør</p>
+        <select id="instructorDropDown"></select>
+      </div>
+      <input type="submit" value="Gem" class="saveButton">
+    </form>
+  </div>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="js/dropdownactivityfill.js"></script>
+<script src="js/dropdowninstructorfill.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/editbooking.js"></script>
+</body>
+</html>
