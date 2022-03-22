@@ -16,7 +16,7 @@
 .food{
   width: 150px;
   text-align: center;
-  line-height: 50px;
+  line-height: 80px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
@@ -29,7 +29,7 @@
 }
 .drinks{
   width: 150px;
-  line-height: 50px;
+  line-height: 80px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;

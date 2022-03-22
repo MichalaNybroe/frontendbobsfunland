@@ -6,7 +6,7 @@
 }
 
 #loginForm #login{
-  background-color: #ff00e0;
+  background-color: darkgreen;
   border: none;
   color: white;
   padding: 10px 30px;
@@ -19,7 +19,7 @@
 #loginForm #login:hover{
   color: white;
   border-radius: 6px;
-  background-color: #eb7cf6;
+  background-color: darkseagreen;
   cursor: pointer;
 }
 
