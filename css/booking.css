@@ -1,7 +1,7 @@
 #booking {
   border-style: solid;
   border-radius: 5px;
-  border-color: darkgreen;
+  border-color: #555555;
   width: 350px;
   margin: 0 auto;
   padding: 0 0 20px;
@@ -13,7 +13,7 @@
   font-size: 22px;
   font-weight: bold;
   padding: 20px 0 0 0;
-  border-bottom: 2px solid darkseagreen;
+  border-bottom: 2px solid #555555;
   width: 50%;
   margin: 0 auto;
 }
@@ -52,13 +52,29 @@
   border: solid 2px #555555;
   border-radius: 5px;
   background-color: white;
-  color: darkseagreen;
+  color: #555555;
   font-weight: bold;
 }
 
 .saveButton:hover {
-  background-color: darkseagreen;
+  background-color: #555555;
   color: white;
+  cursor: pointer;
+}
+
+.deleteButton {
+  margin: 10px;
+  padding: 4px 8px;
+  border: solid 2px #ad0404;
+  border-radius: 5px;
+  background-color: #c4000000;
+  color: #ad0404;
+  font-weight: bold;
+}
+
+.deleteButton:hover {
+  background-color: #ad0404;
+  color: darkseagreen;
   cursor: pointer;
 }
 
@@ -71,16 +87,24 @@
   padding: 50px;
 }
 
-#bookings h3 {
+ h3 {
   font-size: 30px;
   padding: 0 0 30px;
 }
 
 #bookings th {
-  background-color: darkgreen;
+  background-color: #0d7a0d;
   color: white;
 }
 
 #bookings tr:nth-child(even) {
   background-color: rgba(253, 252, 248, 0.4);
+}
+
+#search h3 {
+  padding: 40px 0 10px 0;
+}
+
+#searchFormInput:focus::placeholder {
+  color: transparent;
 }

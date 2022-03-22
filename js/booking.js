@@ -118,7 +118,8 @@ function addRow(booking) {
   cell = row.insertCell(columnCount++);
   const deleteButton = document.createElement("input");
   deleteButton.type = "button";
-  deleteButton.setAttribute("value", "Slet Bookning");
+  deleteButton.setAttribute("value", "Slet");
+  deleteButton.setAttribute("class", "deleteButton");
   deleteButton.onclick = function () {
     deleteBooking(booking, rowCount, row);
   };
@@ -130,17 +131,21 @@ function addRow(booking) {
 //delBooking.addEventListener("click", deleteBooking);
 
 async function deleteBooking(booking, rowCount, row) {
-  booking.preventDefault();
-
   const response = await restDeleteBooking(booking);
-  bookingTable.deleteRow(row.rowIndex);
+  if (response) {
+    bookingTable.deleteRow(row.rowIndex);
+  } else {
+    console.log("Something went wrong in deleteBooking");
+  }
 }
 
 async function restDeleteBooking(booking) {
   //Jeg er lidt i tvivl om hvliken url vi skal bruge...
-  const url = "http://localhost:8080/booking/" + booking;
+  const url = "http://localhost:8080/booking";
 
-  const fetchOption = {
+  const formData = JSON.stringify(booking);
+
+  const fetchOptions = {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
@@ -148,7 +153,9 @@ async function restDeleteBooking(booking) {
     body: "",
   };
 
-  const response = await fetch(url, fetchOption);
+  fetchOptions.body = formData;
+
+  const response = await fetch(url, fetchOptions);
 
   if (!response) {
     out("Something went wrong in restDeleteBooking");
