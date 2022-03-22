@@ -74,6 +74,7 @@ async function createBookingMap() {
     //Dette er udhentet fra vores backend - hvorfor booking.name (det er hvad den hedder i model og i db)
     bookingMap.set(booking.orderNumber, booking);
   });
+  console.log(list);
 }
 
 async function createTableFromMap() {
@@ -88,13 +89,13 @@ function addRow(booking) {
   let row = bookingTable.insertRow(rowCount);
   let cell = row.insertCell(columnCount++);
 
-  cell.innerText = booking.customerName;
+  cell.innerText = booking.customer.name;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.customerEmail;
+  cell.innerText = booking.customer.email;
 
   cell = row.insertCell(columnCount++);
-  cell.innerText = booking.customerPhone;
+  cell.innerText = booking.customer.phoneNumber;
 
   cell = row.insertCell(columnCount++);
   cell.innerText = booking.orderNumber;
