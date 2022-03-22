@@ -130,25 +130,32 @@ function addRow(booking) {
 //delBooking.addEventListener("click", deleteBooking);
 
 async function deleteBooking(booking, rowCount, row) {
-  booking.preventDefault();
-
   const response = await restDeleteBooking(booking);
-  bookingTable.deleteRow(row.rowIndex);
+  if(response) {
+    bookingTable.deleteRow(row.rowIndex);
+  } else {
+    console.log("Something went wrong in deleteBooking");
+  }
+
 }
 
 async function restDeleteBooking(booking) {
   //Jeg er lidt i tvivl om hvliken url vi skal bruge...
-  const url = "http://localhost:8080/booking/" + booking;
+  const url = "http://localhost:8080/booking";
 
-  const fetchOption = {
+  const formData = JSON.stringify(booking);
+
+  const fetchOptions = {
     method: "DELETE",
     headers: {
       "Content-type": "application/json",
     },
-    body: "",
+    body: ""
   };
 
-  const response = await fetch(url, fetchOption);
+  fetchOptions.body = formData;
+
+  const response = await fetch(url, fetchOptions);
 
   if (!response) {
     out("Something went wrong in restDeleteBooking");
