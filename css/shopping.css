@@ -31,10 +31,11 @@
   width: 150px;
   margin-right: auto;
   margin-left: auto;
-  line-height: 150px;
+  text-align: center;
+  line-height: 100px;
   margin-top: 10px;
-  border: 1px solid;
   margin-bottom: 150px;
+  border: 1px solid;
   padding: 180px
 
 }
@@ -145,6 +146,7 @@ h4{
 
 }
 #suppe\ image{
+  line-height: 30px;
   display: inline-block;
   margin-top: auto;
   border-radius: 4px;
