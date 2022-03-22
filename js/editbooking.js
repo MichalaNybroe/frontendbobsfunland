@@ -1,5 +1,4 @@
 async function updateBooking(booking, rowCount, row) {
-
   let customerName = document.getElementById("customerName");
   let customerEmail = document.getElementById("customerEmail");
   let customerPhone = document.getElementById("customerPhone");
@@ -25,7 +24,4 @@ async function updateBooking(booking, rowCount, row) {
   const response = await restUpdateBooking(booking);
 }
 
-async function restUpdateBooking(booking){
-
-
-}
+async function restUpdateBooking(booking) {}
