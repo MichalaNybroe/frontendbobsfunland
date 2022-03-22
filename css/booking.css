@@ -1,19 +1,19 @@
 #booking {
   border-style: solid;
   border-radius: 5px;
-  border-color: #ff61b0;
+  border-color: darkgreen;
   width: 350px;
   margin: 0 auto;
   padding: 0 0 20px;
   background-color: white;
-  color: #ff61b0;
+  color: #555555;
 }
 
 #bookingFormHeader {
   font-size: 22px;
   font-weight: bold;
   padding: 20px 0 0 0;
-  border-bottom: 2px solid #ff61b0;
+  border-bottom: 2px solid darkseagreen;
   width: 50%;
   margin: 0 auto;
 }
@@ -49,15 +49,15 @@
 
 .saveButton {
   margin: 15px 0 8px 0;
-  border: solid 2px #ff61b0;
+  border: solid 2px #555555;
   border-radius: 5px;
   background-color: white;
-  color: #ff61b0;
+  color: darkseagreen;
   font-weight: bold;
 }
 
 .saveButton:hover {
-  background-color: #ff1493;
+  background-color: darkseagreen;
   color: white;
   cursor: pointer;
 }
@@ -77,7 +77,7 @@
 }
 
 #bookings th {
-  background-color: #ff61b0;
+  background-color: darkgreen;
   color: white;
 }
 
