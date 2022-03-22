@@ -49,10 +49,25 @@
 
   <div id="search">
     <h3>Søg efter booking</h3>
-    <form action="http://localhost:8080/search" method="post" id="searchForm">
-      <input type="text" placeholder="kamille@gmail.com" name="searchInput" id="searchFormInput">
-      <input type="submit" value="Søg" class="saveButton">
-    </form>
+    <input type="text" placeholder="kamille@gmail.com" name="searchInput" id="searchInput">
+    <button class="saveButton" id="searchButton">Søg</button>
+
+    <table id="searchTableBookings">
+      <tr>
+        <th>Kunde</th>
+        <th>Kunde email</th>
+        <th>Kunde telefon</th>
+        <th>Ordrenummer</th>
+        <th>Dato</th>
+        <th>Tid</th>
+        <th>Aktivitet</th>
+        <th>Antal Deltagere</th>
+        <th>Instruktør</th>
+        <th>Slet</th>
+      </tr>
+      <tr></tr>
+    </table>
+
   </div>
 
   <div id="bookings">
@@ -80,5 +95,6 @@
 <script src="js/dropdownactivityfill.js"></script>
 <script src="js/dropdowninstructorfill.js"></script>
 <script src="js/booking.js"></script>
+<script src="js/searchbooking.js"></script>
 </body>
 </html>

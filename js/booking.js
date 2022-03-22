@@ -59,8 +59,6 @@ async function sendJson(url, data) {
 }
 
 // Display bookings
-console.log("in display bookings");
-
 const url = "http://localhost:8080/booking";
 const bookingMap = new Map();
 

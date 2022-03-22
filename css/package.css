@@ -1,0 +1,27 @@
+#content p {
+  padding: 5px;
+}
+
+#content h4 {
+  padding: 10px;
+}
+
+#content h3 {
+  padding: 40px 0 10px 0;
+}
+
+#packageBooking{
+  width: 40%;
+  display: inline-block;
+}
+
+#package {
+  padding: 40px 0 0 0;
+  width: 60%;
+  display: inline-block;
+}
+
+#companyPackage {
+  font-size: 30px;
+  padding: 0 0 20px 0;
+}
