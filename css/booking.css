@@ -1,19 +1,19 @@
 #booking {
   border-style: solid;
   border-radius: 5px;
-  border-color: #ff61b0;
+  border-color: #555555;
   width: 350px;
   margin: 0 auto;
   padding: 0 0 20px;
   background-color: white;
-  color: #ff61b0;
+  color: #555555;
 }
 
 #bookingFormHeader {
   font-size: 22px;
   font-weight: bold;
   padding: 20px 0 0 0;
-  border-bottom: 2px solid #ff61b0;
+  border-bottom: 2px solid #555555;
   width: 50%;
   margin: 0 auto;
 }
@@ -49,15 +49,15 @@
 
 .saveButton {
   margin: 15px 0 8px 0;
-  border: solid 2px #ff61b0;
+  border: solid 2px #555555;
   border-radius: 5px;
   background-color: white;
-  color: #ff61b0;
+  color: #555555;
   font-weight: bold;
 }
 
 .saveButton:hover {
-  background-color: #ff1493;
+  background-color: #555555;
   color: white;
   cursor: pointer;
 }
@@ -71,16 +71,24 @@
   padding: 50px;
 }
 
-#bookings h3 {
+ h3 {
   font-size: 30px;
   padding: 0 0 30px;
 }
 
 #bookings th {
-  background-color: #ff61b0;
+  background-color: #555555;
   color: white;
 }
 
 #bookings tr:nth-child(even) {
   background-color: rgba(253, 252, 248, 0.4);
+}
+
+#search h3 {
+  padding: 40px 0 10px 0;
+}
+
+#searchFormInput:focus::placeholder {
+  color: transparent;
 }
