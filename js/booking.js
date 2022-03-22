@@ -34,7 +34,7 @@ async function createBooking(event) {
     plainFormData.customer = {
       name: plainFormData.customerName,
       email: plainFormData.customerEmail,
-      phoneNumber: plainFormData.customerPhone
+      phoneNumber: plainFormData.customerPhone,
     };
 
     await sendJson(url, plainFormData);
