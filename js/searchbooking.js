@@ -1,23 +1,25 @@
 "use strict";
 
 // Søg bookings
-const searchInput = document.getElementById('searchInput');
-const searchSubmit = document.getElementById('searchButton');
+const searchInput = document.getElementById("searchInput");
+const searchSubmit = document.getElementById("searchButton");
 
 searchSubmit.addEventListener("click", sendSearch);
 
 async function sendSearch(event) {
-event.preventDefault();
+  event.preventDefault();
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: searchInput.value
+    headers: { "Content-Type": "application/json" },
+    body: searchInput.value,
   };
 
   const searchURL = "http://localhost:8080/search";
 
-  const bookings = await fetch(searchURL, fetchOptions).then((response) => response.json());
+  const bookings = await fetch(searchURL, fetchOptions).then((response) =>
+    response.json()
+  );
 
   if (!bookings) {
     const errorMessage = await bookings.text();
@@ -27,12 +29,12 @@ event.preventDefault();
   const bookingSearchMap = new Map();
 
   await bookings.forEach((booking) => {
-    bookingSearchMap.set(booking.orderNumber, booking)
+    bookingSearchMap.set(booking.orderNumber, booking);
   });
   bookingSearchMap.forEach((booking) => addRow(booking));
 }
 
-const searchBookingTable = document.getElementById('searchTableBookings');
+const searchBookingTable = document.getElementById("searchTableBookings");
 function addRow(booking) {
   const rowCount = searchBookingTable.rows.length;
   let columnCount = 0;
@@ -75,5 +77,3 @@ function addRow(booking) {
   };
   cell.appendChild(deleteButton);
 }
-
-
