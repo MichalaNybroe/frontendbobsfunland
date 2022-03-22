@@ -136,7 +136,7 @@ function addRow(booking) {
   editButton.onclick = function () {
     window.location.replace("editBooking.html");
     updateBooking(booking, rowCount, row);
-  }
+  };
   cell.appendChild(editButton);
 }
 
