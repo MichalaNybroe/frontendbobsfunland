@@ -31,6 +31,11 @@ async function createBooking(event) {
     const plainFormData = Object.fromEntries(formData.entries());
     plainFormData.instructor = { email: instructorValue };
     plainFormData.activity = { name: activityValue };
+    plainFormData.customer = {
+      name: plainFormData.customerName,
+      email: plainFormData.customerEmail,
+      phoneNumber: plainFormData.customerPhone,
+    };
 
     await sendJson(url, plainFormData);
   } catch (err) {
