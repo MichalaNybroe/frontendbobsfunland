@@ -131,12 +131,11 @@ function addRow(booking) {
 
 async function deleteBooking(booking, rowCount, row) {
   const response = await restDeleteBooking(booking);
-  if(response) {
+  if (response) {
     bookingTable.deleteRow(row.rowIndex);
   } else {
     console.log("Something went wrong in deleteBooking");
   }
-
 }
 
 async function restDeleteBooking(booking) {
@@ -150,7 +149,7 @@ async function restDeleteBooking(booking) {
     headers: {
       "Content-type": "application/json",
     },
-    body: ""
+    body: "",
   };
 
   fetchOptions.body = formData;
