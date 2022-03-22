@@ -118,7 +118,8 @@ function addRow(booking) {
   cell = row.insertCell(columnCount++);
   const deleteButton = document.createElement("input");
   deleteButton.type = "button";
-  deleteButton.setAttribute("value", "Slet Bookning");
+  deleteButton.setAttribute("value", "Slet");
+  deleteButton.setAttribute("class", "deleteButton");
   deleteButton.onclick = function () {
     deleteBooking(booking, rowCount, row);
   };
