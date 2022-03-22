@@ -1,46 +1,41 @@
 
 
 .merch {
+  width: 150px;
   text-align: center;
-  width: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
   margin-bottom: 150px;
+  margin-top: 60px;
+  line-height: 50px;
   border: 1px solid;
   padding: 200px
 
 }
 
 .food{
+  width: 150px;
   text-align: center;
-  line-height: 400px;
-  width: 95%;
+  line-height: 80px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 60px;
+  margin-bottom: 150px;
   border: 1px solid;
-  padding-top: 60px;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 40px;
+  padding: 200px
+
 
 
 }
 .drinks{
-  white-space:break-spaces ;
-  text-align-all: center;
-  line-height: 400px;
-  width: 95%;
+  width: 150px;
+  line-height: 80px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 60px;
   border: 1px solid;
-  padding-top: 60px;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 40px;
+  margin-bottom: 150px;
+  padding: 200px
 
 }
 
@@ -66,5 +61,179 @@ h4{
   text-align: center;
   margin-top: 100px;
   font-size: 30px;
+
+}
+
+#tshirt\ image {
+  line-height: 30px;
+  display: inline-block;
+  float: left;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: auto;
+
+
+}
+#cap\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: auto;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: auto;
+
+}
+#hoodie\ image {
+  line-height: 30px;
+  display: inline-block;
+  margin-top: auto;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: auto;
+}
+#pølsehorn\ image {
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+}
+#ribs\ image {
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+
+}
+#sandwich\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  margin-top: auto;
+}
+#pandekager\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+
+}
+#burger\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+
+}
+#suppe\ image{
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#pommesfrites\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#kaffe\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 5px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#kakao\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 5px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#øl\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#cola\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+
+#fanta\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+}
+#sprite\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+
+}
+#mjød\ image{
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 40px;
+  width: 200px;
+  height: 200px;
 
 }
