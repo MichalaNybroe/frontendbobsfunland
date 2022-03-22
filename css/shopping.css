@@ -3,39 +3,39 @@
 .merch {
   width: 150px;
   text-align: center;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   margin-bottom: 150px;
-  margin-top: 60px;
-  line-height: 50px;
+  margin-top: 10px;
+  line-height: 100px;
   border: 1px solid;
-  padding: 200px
+  padding: 180px
 
 }
 
 .food{
   width: 150px;
-  text-align: center;
-  line-height: 80px;
-  margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-left: auto;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 10px;
   margin-bottom: 150px;
   border: 1px solid;
-  padding: 200px
+  padding: 180px
 
 
 
 }
 .drinks{
   width: 150px;
-  line-height: 80px;
-  margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-left: auto;
+  line-height: 150px;
+  margin-top: 10px;
   border: 1px solid;
   margin-bottom: 150px;
-  padding: 200px
+  padding: 180px
 
 }
 
@@ -67,41 +67,38 @@ h4{
 #tshirt\ image {
   line-height: 30px;
   display: inline-block;
-  float: left;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
-  margin-bottom: auto;
+  margin-top: auto;
 
 
 }
 #cap\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
-  margin-bottom: auto;
+  margin-top: auto;
 
 }
 #hoodie\ image {
   line-height: 30px;
   display: inline-block;
-  margin-top: auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
-  margin-bottom: auto;
+  margin-top: auto;
 }
 #pølsehorn\ image {
   line-height: 30px;
   display: inline-block;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
   margin-top: auto;
@@ -110,7 +107,7 @@ h4{
   line-height: 30px;
   display: inline-block;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
   margin-top: auto;
@@ -119,9 +116,8 @@ h4{
 #sandwich\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
   margin-top: auto;
@@ -129,9 +125,9 @@ h4{
 #pandekager\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -140,9 +136,9 @@ h4{
 #burger\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -150,9 +146,9 @@ h4{
 }
 #suppe\ image{
   display: inline-block;
-  margin-top: 10px;
+  margin-top: auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -160,9 +156,9 @@ h4{
 #pommesfrites\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: 10px;
+  margin-top:auto;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -170,9 +166,10 @@ h4{
 #kaffe\ image{
   line-height: 30px;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: auto;
+  display: inline-block;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -182,7 +179,7 @@ h4{
   display: inline-block;
   margin-top: 5px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -192,7 +189,7 @@ h4{
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -202,7 +199,7 @@ h4{
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -213,7 +210,7 @@ h4{
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 }
@@ -222,7 +219,7 @@ h4{
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
@@ -232,7 +229,7 @@ h4{
   display: inline-block;
   margin-top: 10px;
   border-radius: 4px;
-  padding: 40px;
+  padding: 15px;
   width: 200px;
   height: 200px;
 
