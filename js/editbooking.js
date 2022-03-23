@@ -1,3 +1,16 @@
+/*
+document.addEventListener("DOMContentLoaded", createFormEventListener);
+
+let updateBook;
+
+function createFormEventListener() {
+  updateBook = document.getElementById("bookForm");
+  console.log(updateBook);
+  updateBook.addEventListener("submit", restUpdateBooking);
+}
+
+ */
+
 async function updateBooking(booking) {
   let header = document.getElementById("bookingFormHeader");
   let updateButton = document.getElementById("saveButton");
@@ -12,7 +25,7 @@ async function updateBooking(booking) {
   let instructor = document.getElementById("instructorDropDown");
 
   header.innerText = "Rediger booking";
-  updateButton.innerText "Update";
+  updateButton.value = "Update";
   customerName.value = booking.customer.name;
   console.log(booking.customer.name);
   customerEmail.value = booking.customer.email;
@@ -26,10 +39,12 @@ async function updateBooking(booking) {
 
   console.log(booking);
 
-  const response = await restUpdateBooking(booking);
+  //const response = await restUpdateBooking(booking);
 }
-
+/*
 async function restUpdateBooking(booking) {
+  booking.preventDefault();
+
   const formData = JSON.stringify(booking);
   const url = "http://localhost:8080/booking";
   const fetchOptions = {
@@ -44,3 +59,6 @@ async function restUpdateBooking(booking) {
   }
   return response;
 }
+
+ */
+
