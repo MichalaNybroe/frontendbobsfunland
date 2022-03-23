@@ -29,6 +29,7 @@ async function createBooking(event) {
     const formData = new FormData(form);
 
     const plainFormData = Object.fromEntries(formData.entries());
+    console.log(plainFormData);
     plainFormData.instructor = { email: instructorValue };
     plainFormData.activity = { name: activityValue };
     plainFormData.customer = {
