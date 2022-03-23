@@ -31,7 +31,7 @@ header .panel {
   background-color: white;
   display: block;
   text-align: center;
-  padding: 30px 10px;
+  padding: 30px 0px;
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ footer a:hover {
   margin-top: 30px;
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: 15px;
   float: right;
   border-radius: 5px;
   border: solid 4px;
@@ -82,6 +82,7 @@ footer a:hover {
 }
 
 .panel {
-width: 100%;
+ width: auto;
+
 }
 
