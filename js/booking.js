@@ -127,6 +127,7 @@ function addRow(booking) {
   deleteButton.setAttribute("class", "deleteButton");
   deleteButton.onclick = function () {
     deleteBooking(booking, rowCount, row);
+    window.location.reload();
   };
   cell.appendChild(deleteButton);
 
