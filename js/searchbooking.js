@@ -22,7 +22,7 @@ async function sendSearch(event) {
   const bookings = await fetch(searchURL, fetchOptions).then((response) =>
     response.json()
   );
-  console.log(bookings)
+  console.log(bookings);
 
   if (!bookings) {
     const errorMessage = await bookings.text();
@@ -100,8 +100,8 @@ function addSearchRow(booking) {
 }
 
 function emptyTable() {
-  document.querySelectorAll('.searchTableRow').forEach(e => e.remove());
-  }
+  document.querySelectorAll(".searchTableRow").forEach((e) => e.remove());
+}
 
 async function deleteSearchBooking(booking, rowSearchCount, rowS) {
   const response = await restSearchDeleteBooking(booking);
