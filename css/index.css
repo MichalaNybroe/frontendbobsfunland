@@ -2,53 +2,49 @@
   font-size: 40px;
   text-align: center;
   padding: 50px;
-  color:#303030;
+  color: #303030;
 }
 
 .introducktion {
   text-align: center;
-
-}
-
-.information {
-  margin: auto 0;
-  margin-bottom: 400px;
-  margin-top: 100px;
-  text-decoration: underline;
 }
 
 #activityContainer {
   margin: auto 0;
+}
+
+#activityContainer h3 {
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-.chosenActivity h3 {
-  margin-top: 80px;
-  margin-bottom: 40px;
-  text-decoration: underline;
-
-}
-.requirements {
-  margin-top: 80px;
-  float: left;
-
-
-}
-.adventureImg {
-  margin-right: 100px;
-  margin-left: 400px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  height: 200px;
-  max-width: 100px;
-}
 #contentActivity {
+  border: #555555 solid;
+  width: 60%;
   display: inline-block;
-
+  margin-bottom: 20px;
+  padding: 20px;
 }
+
+#activityName {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.requirements {
+  text-align: center;
+}
+
+#activityInformation {
+  text-align: center;
+}
+
 #bookingInformation {
-  margin-bottom: 70px;
-  margin-top: 10px;
-  text-align:center;
-
+  margin-bottom: 50px;
+  text-align: center;
 }
+
+

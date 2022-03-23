@@ -19,20 +19,20 @@ async function displayActivity() {
   const activity = await readActivity();
 
   activityName.innerText = activity.name;
-  activityInfo.innerText = activity.info;
+  activityInfo.innerText = activity.information;
 
   const age = activity.age;
   if (age === 0) {
-    activityAge.innerText = "Alder: ingen begrænsning";
+    activityAge.innerText = "Ingen aldersbegrænsning";
   } else {
-    activityAge.innerText = "Alder: " + activity.age;
+    activityAge.innerText = "Minimumsalder " + activity.age;
   }
 
   const height = activity.height;
   if (height === 0) {
-    activityHeight.innerText = "Højde: ingen begrænsning";
+    activityHeight.innerText = "Ingen minimumshøjde";
   } else {
-    activityHeight.innerText = "Højde: " + activity.height;
+    activityHeight.innerText = "Minimumshøjde " + activity.height;
   }
 }
 // Senere brug af dynamisk ændring af billede
