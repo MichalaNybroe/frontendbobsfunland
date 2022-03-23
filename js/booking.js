@@ -134,8 +134,7 @@ function addRow(booking) {
   editButton.setAttribute("value", "Rediger");
   editButton.setAttribute("class", "editButton");
   editButton.onclick = function () {
-    window.location.replace("editBooking.html");
-    updateBooking(booking, rowCount, row);
+    updateBooking(booking);
   };
   cell.appendChild(editButton);
 }
@@ -172,5 +171,6 @@ async function restDeleteBooking(booking) {
 
   return response;
 }
+
 
 createTableFromMap();
