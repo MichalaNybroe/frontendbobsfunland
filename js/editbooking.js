@@ -28,5 +28,3 @@ async function updateBooking(booking) {
 
   console.log(booking);
 }
-
-
