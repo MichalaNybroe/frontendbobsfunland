@@ -172,5 +172,4 @@ async function restDeleteBooking(booking) {
   return response;
 }
 
-
 createTableFromMap();

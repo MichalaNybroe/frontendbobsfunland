@@ -27,6 +27,4 @@ async function updateBooking(booking) {
   const response = await restUpdateBooking(booking);
 }
 
-async function restUpdateBooking(booking) {
-
-}
+async function restUpdateBooking(booking) {}
