@@ -25,7 +25,6 @@ async function handleLogin(event) {
   try {
     const formData = new FormData(form);
     await postLogin(url, formData);
-
   } catch (err) {
     out(err.message);
   }
@@ -38,15 +37,14 @@ async function postLogin(url, formData) {
 
   const fetchOptions = {
     method: "POST",
-    headers: {"Content-Type": "application/json"},
+    headers: { "Content-Type": "application/json" },
     body: jsonDataString,
   };
 
-
   //lav validering på om det der kommer tilbage er en rigtigt
   await fetch(url, fetchOptions)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       localStorage.setItem("login", JSON.stringify(data));
     });
   // Put the object into storage above
