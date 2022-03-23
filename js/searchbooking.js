@@ -107,6 +107,7 @@ async function deleteSearchBooking(booking, rowSearchCount, rowS) {
   const response = await restSearchDeleteBooking(booking);
   if (response) {
     searchBookingTable.deleteRow(rowS.rowIndex);
+    window.location.reload();
   } else {
     console.log("Something went wrong in deleteBooking");
   }

@@ -41,6 +41,8 @@ async function createBooking(event) {
   } catch (err) {
     alert("Noget gik galt ved bookning");
   }
+
+  window.location.reload();
 }
 
 async function sendJson(url, data) {
