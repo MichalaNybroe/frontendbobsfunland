@@ -1,5 +1,6 @@
 async function updateBooking(booking) {
   let header = document.getElementById("bookingFormHeader");
+  let updateButton = document.getElementById("saveButton");
   let customerName = document.getElementById("customerName");
   let customerEmail = document.getElementById("customerEmail");
   let customerPhone = document.getElementById("customerPhone");
@@ -11,6 +12,7 @@ async function updateBooking(booking) {
   let instructor = document.getElementById("instructorDropDown");
 
   header.innerText = "Rediger booking";
+  updateButton.innerText "Update";
   customerName.value = booking.customer.name;
   console.log(booking.customer.name);
   customerEmail.value = booking.customer.email;
