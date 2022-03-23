@@ -1,4 +1,5 @@
-async function updateBooking(booking, rowCount, row) {
+async function updateBooking(booking) {
+  let header = document.getElementById("bookingFormHeader");
   let customerName = document.getElementById("customerName");
   let customerEmail = document.getElementById("customerEmail");
   let customerPhone = document.getElementById("customerPhone");
@@ -6,18 +7,20 @@ async function updateBooking(booking, rowCount, row) {
   let activity = document.getElementById("activityDropDown");
   let date = document.getElementById("date");
   let time = document.getElementById("time");
-  let participants = document.getElementById("participants");
+  let participants = document.getElementById("nrOfParticipants");
   let instructor = document.getElementById("instructorDropDown");
 
-  customerName.innerText = booking.customerName;
-  customerEmail.innerText = booking.customerEmail;
-  customerPhone.innerText = booking.customerPhone;
+  header.innerText = "Rediger booking";
+  customerName.value = booking.customer.name;
+  console.log(booking.customer.name);
+  customerEmail.value = booking.customer.email;
+  customerPhone.value = booking.customer.phoneNumber;
 
-  activity.innerText = booking.activity;
-  date.innerText = booking.date;
-  time.innerText = booking.time;
-  participants.innerText = booking.participants;
-  instructor.innerText = booking.instructor;
+  activity.value = booking.activity.name;
+  date.value = booking.date;
+  time.value = booking.time;
+  participants.value = booking.nrOfParticipants;
+  instructor.value = booking.instructor.email;
 
   console.log(booking);
 
