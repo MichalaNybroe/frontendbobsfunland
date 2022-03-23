@@ -33,12 +33,12 @@ async function restUpdateBooking(booking) {
   const fetchOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: ""
+    body: "",
   };
   fetchOptions.body = formData;
-  const response = await fetch(url,fetchOptions)
-  if(!response) {
-    console.log("something went wrong in restudatebooking")
+  const response = await fetch(url, fetchOptions);
+  if (!response) {
+    console.log("something went wrong in restudatebooking");
   }
   return response;
 }
