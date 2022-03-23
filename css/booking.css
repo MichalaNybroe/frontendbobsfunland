@@ -78,12 +78,28 @@
   cursor: pointer;
 }
 
+.editButton {
+  margin: 10px;
+  padding: 4px 8px;
+  border: solid 2px #0d7a0d;
+  border-radius: 5px;
+  background-color: #c4000000;
+  color: #0d7a0d;
+  font-weight: bold;
+}
+
+.editButton:hover {
+  background-color: #0d7a0d;
+  color: darkseagreen;
+  cursor: pointer;
+}
+
 #content table {
   margin: 0 auto;
   width: 80%;
 }
 
-#bookings {
+#content table {
   padding: 50px;
 }
 
@@ -92,12 +108,12 @@
   padding: 0 0 30px;
 }
 
-#bookings th {
+#tableBooking th {
   background-color: #0d7a0d;
   color: white;
 }
 
-#bookings tr:nth-child(even) {
+#tableBooking tr:nth-child(even) {
   background-color: rgba(253, 252, 248, 0.4);
 }
 
@@ -108,3 +124,14 @@
 #searchFormInput:focus::placeholder {
   color: transparent;
 }
+
+
+#searchTableBookings th {
+  background-color: #555555;
+  color: white;
+}
+
+#searchTableBookings tr:nth-child(even) {
+  background-color: rgba(253, 252, 248, 0.4);
+}
+

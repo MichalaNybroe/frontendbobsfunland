@@ -31,6 +31,11 @@ async function createBooking(event) {
     const plainFormData = Object.fromEntries(formData.entries());
     plainFormData.instructor = { email: instructorValue };
     plainFormData.activity = { name: activityValue };
+    plainFormData.customer = {
+      name: plainFormData.customerName,
+      email: plainFormData.customerEmail,
+      phoneNumber: plainFormData.customerPhone,
+    };
 
     await sendJson(url, plainFormData);
   } catch (err) {
@@ -59,8 +64,6 @@ async function sendJson(url, data) {
 }
 
 // Display bookings
-console.log("in display bookings");
-
 const url = "http://localhost:8080/booking";
 const bookingMap = new Map();
 
@@ -115,7 +118,6 @@ function addRow(booking) {
   cell = row.insertCell(columnCount++);
   cell.innerText = booking.instructor.email;
 
-  //Her skal vi vel have vores delete button, men hvordan?
   cell = row.insertCell(columnCount++);
   const deleteButton = document.createElement("input");
   deleteButton.type = "button";
@@ -125,11 +127,18 @@ function addRow(booking) {
     deleteBooking(booking, rowCount, row);
   };
   cell.appendChild(deleteButton);
-}
 
-//let deBooking;
-//delBooking = document.getElementById("deleteButton");
-//delBooking.addEventListener("click", deleteBooking);
+  cell = row.insertCell(columnCount++);
+  const editButton = document.createElement("input");
+  editButton.type = "button";
+  editButton.setAttribute("value", "Rediger");
+  editButton.setAttribute("class", "editButton");
+  editButton.onclick = function () {
+    window.location.replace("editBooking.html");
+    updateBooking(booking, rowCount, row);
+  };
+  cell.appendChild(editButton);
+}
 
 async function deleteBooking(booking, rowCount, row) {
   const response = await restDeleteBooking(booking);
@@ -141,7 +150,6 @@ async function deleteBooking(booking, rowCount, row) {
 }
 
 async function restDeleteBooking(booking) {
-  //Jeg er lidt i tvivl om hvliken url vi skal bruge...
   const url = "http://localhost:8080/booking";
 
   const formData = JSON.stringify(booking);
