@@ -27,4 +27,18 @@ async function updateBooking(booking) {
   const response = await restUpdateBooking(booking);
 }
 
-async function restUpdateBooking(booking) {}
+async function restUpdateBooking(booking) {
+  const formData = JSON.stringify(booking);
+  const url = "http://localhost:8080/booking";
+  const fetchOptions = {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: ""
+  };
+  fetchOptions.body = formData;
+  const response = await fetch(url,fetchOptions)
+  if(!response) {
+    console.log("something went wrong in restudatebooking")
+  }
+  return response;
+}
