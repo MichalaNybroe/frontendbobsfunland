@@ -28,3 +28,7 @@ async function sendSearch() {
   }
   return bookings;
 }
+
+function emptyTable() {
+  document.querySelectorAll(".searchTableRow").forEach((e) => e.remove());
+}
