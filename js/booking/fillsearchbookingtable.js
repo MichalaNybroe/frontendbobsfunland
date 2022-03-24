@@ -1,4 +1,3 @@
-
 const bookingSearchMap = new Map();
 const searchBookingTable = document.getElementById("searchTableBookings");
 
