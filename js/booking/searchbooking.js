@@ -1,50 +1,36 @@
 "use strict";
 
 // Søg bookings
+const searchURL = "http://localhost:8080/search";
 const searchInput = document.getElementById("searchInput");
 const searchSubmit = document.getElementById("searchButton");
 
-searchSubmit.addEventListener("click", sendSearch);
 
-async function sendSearch(event) {
-  emptyTable();
-
-  event.preventDefault();
-
+async function fetchBookings() {
   const fetchOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: searchInput.value,
   };
 
-  const searchURL = "http://localhost:8080/search";
-
-  const bookings = await fetch(searchURL, fetchOptions).then((response) =>
+  return await fetch(searchURL, fetchOptions).then((response) =>
     response.json()
   );
-  console.log(bookings);
+}
+
+async function sendSearch() {
+  emptyTable();
+
+  const bookings = fetchBookings();
 
   if (!bookings) {
     const errorMessage = await bookings.text();
     throw new Error(errorMessage);
   }
-
-  const bookingSearchMap = new Map();
-
-  await bookings.forEach((booking) => {
-    bookingSearchMap.set(booking.orderNumber, booking);
-  });
-
-  console.log(bookingSearchMap);
-
-  bookingSearchMap.forEach((booking) => addSearchRow(booking));
+  return bookings;
 }
 
-const searchBookingTable = document.getElementById("searchTableBookings");
-
-console.log(searchBookingTable);
-
-function addSearchRow(booking) {
+function addSearchRow(booking, table) {
   const rowSearchCount = searchBookingTable.rows.length;
   let columnSearchCount = 0;
 

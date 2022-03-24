@@ -12,7 +12,7 @@ async function updateBooking(booking) {
   let instructor = document.getElementById("instructorDropDown");
 
   header.innerText = "Rediger booking";
-  updateButton.innerText "Update";
+  updateButton.innerText = "Update";
   customerName.value = booking.customer.name;
   console.log(booking.customer.name);
   customerEmail.value = booking.customer.email;
