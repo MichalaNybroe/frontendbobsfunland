@@ -97,15 +97,12 @@
 #content table {
   margin: 0 auto;
   width: 80%;
-}
-
-#content table {
-  padding: 50px;
+  padding: 0 0 50px;
 }
 
  h3 {
   font-size: 30px;
-  padding: 0 0 30px;
+  padding: 50px 0 20px;
   margin-top: 20px;
   margin-bottom: 2px;
  }
