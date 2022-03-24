@@ -5,7 +5,6 @@ const searchURL = "http://localhost:8080/search";
 const searchInput = document.getElementById("searchInput");
 const searchSubmit = document.getElementById("searchButton");
 
-
 async function fetchBookings() {
   const fetchOptions = {
     method: "POST",
