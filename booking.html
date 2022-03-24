@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/bced513090.js" crossorigin="anonymous"></script>
 
 
-  <script src="js/loginCheck.js" defer></script>
+  <script src="js/login/loginCheck.js" defer></script>
 </head>
 
 <body>
@@ -47,6 +47,7 @@
         <input name="nrOfParticipants" type="text" placeholder="eks 5" required class="input" id="nrOfParticipants">
         <p>Instruktør</p>
         <select id="instructorDropDown"></select>
+        <input name="orderNumber" id="orderNumber" hidden>
       </div>
       <input type="submit" value="Gem" class="saveButton" id="saveButton">
     </form>
@@ -99,10 +100,14 @@
 </div>
 
 <div id="footer"></div>
-<script src="js/searchbooking.js"></script>
+<script src="js/booking/searchbooking.js"></script>
 <script src="js/dropdownactivityfill.js"></script>
 <script src="js/dropdowninstructorfill.js"></script>
-<script src="js/booking.js"></script>
-<script src="js/editbooking.js"></script>
+<script src="js/booking/deletebooking.js"></script>
+<script src="js/booking/booking.js"></script>
+<script src="js/booking/editbooking.js"></script>
+<script src="js/booking/createbookingtable.js"></script>
+<script src="js/booking/fillallbookings.js"></script>
+<script src="js/booking/fillsearchbookingtable.js"></script>
 </body>
 </html>
