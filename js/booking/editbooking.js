@@ -4,6 +4,7 @@ async function updateBooking(booking) {
   let customerName = document.getElementById("customerName");
   let customerEmail = document.getElementById("customerEmail");
   let customerPhone = document.getElementById("customerPhone");
+  let orderNumber = document.getElementById("orderNumber");
 
   let activity = document.getElementById("activityDropDown");
   let date = document.getElementById("date");
@@ -12,7 +13,8 @@ async function updateBooking(booking) {
   let instructor = document.getElementById("instructorDropDown");
 
   header.innerText = "Rediger booking";
-  updateButton.innerText = "Update";
+  updateButton.value = "Update";
+  orderNumber.value = booking.orderNumber;
   customerName.value = booking.customer.name;
   console.log(booking.customer.name);
   customerEmail.value = booking.customer.email;
@@ -25,22 +27,4 @@ async function updateBooking(booking) {
   instructor.value = booking.instructor.email;
 
   console.log(booking);
-
-  const response = await restUpdateBooking(booking);
-}
-
-async function restUpdateBooking(booking) {
-  const formData = JSON.stringify(booking);
-  const url = "http://localhost:8080/booking";
-  const fetchOptions = {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: "",
-  };
-  fetchOptions.body = formData;
-  const response = await fetch(url, fetchOptions);
-  if (!response) {
-    console.log("something went wrong in restudatebooking");
-  }
-  return response;
 }
