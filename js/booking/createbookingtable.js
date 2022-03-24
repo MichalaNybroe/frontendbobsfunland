@@ -16,7 +16,10 @@ function addRow(booking, table) {
   let columnCount = 0;
   let row = table.insertRow(rowCount);
   let cell = row.insertCell(columnCount++);
-  //row.setAttribute("class", "searchTableRow");
+
+  if (table.id === "searchTableBookings") {
+    row.setAttribute("class", "searchTableRow");
+  }
 
   cell.innerText = booking.customer.name;
 
