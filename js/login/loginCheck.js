@@ -8,18 +8,17 @@ function loginCheck() {
   if (loginStorage) {
     console.log("logged in");
     if (loginStorage.access.accessLevel === 1) {
-      console.log("You are admin!")
-      searchTableBtn.forEach(t => t.style.display = "table-cell")
-      editBtn.forEach(t => t.style.display = "block");
-      deleteBtn.forEach(t => t.style.display = "block");
-      console.log("Done")
+      console.log("You are admin!");
+      searchTableBtn.forEach((t) => (t.style.display = "table-cell"));
+      editBtn.forEach((t) => (t.style.display = "block"));
+      deleteBtn.forEach((t) => (t.style.display = "block"));
+      console.log("Done");
     } else {
-      console.log("You´re not admin!")
-      searchTableBtn.forEach(t => t.style.display = "none")
-      editBtn.forEach(t => t.style.display = "none");
-      deleteBtn.forEach(t => t.style.display = "none");
+      console.log("You´re not admin!");
+      searchTableBtn.forEach((t) => (t.style.display = "none"));
+      editBtn.forEach((t) => (t.style.display = "none"));
+      deleteBtn.forEach((t) => (t.style.display = "none"));
     }
-
   } else {
     window.location.replace("login.html");
   }

@@ -52,7 +52,7 @@ function addRow(booking, table) {
   deleteButton.type = "button";
   deleteButton.setAttribute("value", "Slet");
   deleteButton.setAttribute("class", "deleteButton");
-  console.log("display none")
+  console.log("display none");
   deleteButton.onclick = function () {
     deleteBooking(booking, rowCount, row);
     window.location.reload();
