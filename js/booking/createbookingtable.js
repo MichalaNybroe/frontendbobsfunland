@@ -52,6 +52,7 @@ function addRow(booking, table) {
   deleteButton.type = "button";
   deleteButton.setAttribute("value", "Slet");
   deleteButton.setAttribute("class", "deleteButton");
+  console.log("display none")
   deleteButton.onclick = function () {
     deleteBooking(booking, rowCount, row);
     window.location.reload();
@@ -67,4 +68,8 @@ function addRow(booking, table) {
     updateBooking(booking);
   };
   cell.appendChild(editButton);
+
+  //Check if the person is logged in as a admin or normal or not at all.
+  //This is not the right place to place it!! but it works for now.
+  loginCheck();
 }
