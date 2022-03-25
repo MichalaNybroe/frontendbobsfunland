@@ -4,6 +4,7 @@ const activityAge = document.getElementById("age");
 const activityHeight = document.getElementById("height");
 const activityImage = document.getElementById("activityImage");
 const activityInfo = document.getElementById("activityInformation");
+const contentActivityDiv = document.getElementById("contentActivity");
 
 const urlReadActivityByName = "http://localhost:8080/activity/";
 const map = new Map();
@@ -17,7 +18,7 @@ function readActivity() {
 
 async function displayActivity() {
   const activity = await readActivity();
-
+  contentActivityDiv.style.display = "inline-block";
   activityName.innerText = activity.name;
   activityInfo.innerText = activity.information;
 
