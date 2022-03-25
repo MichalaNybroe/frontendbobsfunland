@@ -49,7 +49,7 @@ async function postLogin(url, formData) {
     });
   // Put the object into storage above
 
-  window.location.replace("index.html");
+  window.location.replace("booking.html");
 
   //MIS
   // Retrieve the object from storage
